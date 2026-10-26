@@ -261,7 +261,7 @@ export const dummyBlogPosts: BlogPost[] = [
       "A quick seasonal maintenance routine prevents track jamming, water ingress, and hardware degradation in both UPVC and Aluminium doors and windows.",
     category: "Maintenance & Care",
     coverImage:
-      "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80",
     author: {
       name: "Rajesh Sharma",
       role: "Senior Architectural Consultant",
