@@ -10,11 +10,11 @@ interface FeaturedBlogHeroProps {
 
 export default function FeaturedBlogHero({ post }: FeaturedBlogHeroProps) {
   const imageUrl = getCloudinaryUrl(post.coverImage, {
-    width: 1200,
-    height: 700,
-    crop: "fill",
-    quality: "auto",
-  });
+  width: 800,
+  height: 500,
+  crop: "fill",
+  quality: "auto",
+});
 
   const formattedDate = new Date(post.publishedAt).toLocaleDateString("en-US", {
     month: "long",

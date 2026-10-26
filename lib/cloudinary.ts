@@ -6,50 +6,60 @@ export interface CloudinaryOptions {
   format?: "auto" | "webp" | "jpg" | "png";
 }
 
-const DEFAULT_CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "demo";
+const CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
 
-/**
- * Builds or transforms a Cloudinary image URL.
- * Supports:
- * 1. Full Cloudinary URLs (injects format/quality/dimensions)
- * 2. Public IDs (e.g., 'samples/architecture/modern-window')
- * 3. External fallback URLs (returns directly if not Cloudinary)
- */
 export function getCloudinaryUrl(
   src: string,
   options: CloudinaryOptions = {}
 ): string {
   if (!src) return "";
 
-  const {
-    width,
-    height,
-    crop = "fill",
-    quality = "auto",
-    format = "auto",
-  } = options;
-
-  const transforms: string[] = [];
-
-  if (format) transforms.push(`f_${format}`);
-  if (quality) transforms.push(`q_${quality}`);
-  if (crop && (width || height)) transforms.push(`c_${crop}`);
-  if (width) transforms.push(`w_${width}`);
-  if (height) transforms.push(`h_${height}`);
-
-  const transformString = transforms.join(",");
-
-  // Check if it's already a full URL
-  if (src.startsWith("http://") || src.startsWith("https://")) {
-    if (src.includes("res.cloudinary.com") && transformString) {
-      // Inject transformation parameters into Cloudinary URL: /image/upload/...
-      return src.replace("/image/upload/", `/image/upload/${transformString}/`);
+  // Keep external image URLs unchanged.
+  if (/^https?:\/\//i.test(src)) {
+    // Return Unsplash and other external URLs as they are.
+    if (!src.includes("res.cloudinary.com")) {
+      return src;
     }
+
+    // Transform existing Cloudinary URLs.
+    const { width, height, crop = "fill", quality = "auto", format = "auto" } = options;
+
+    const transformations = [
+      format && `f_${format}`,
+      quality && `q_${quality}`,
+      (width || height) && crop && `c_${crop}`,
+      width && `w_${width}`,
+      height && `h_${height}`,
+    ].filter(Boolean);
+
+    if (!transformations.length) return src;
+
+    return src.replace(
+      "/image/upload/",
+      `/image/upload/${transformations.join(",")}/`
+    );
+  }
+
+  // A public ID requires a configured Cloudinary cloud name.
+  if (!CLOUD_NAME) {
     return src;
   }
 
-  // Treat as Cloudinary public ID
+  const { width, height, crop = "fill", quality = "auto", format = "auto" } = options;
+
+  const transformations = [
+    format && `f_${format}`,
+    quality && `q_${quality}`,
+    (width || height) && crop && `c_${crop}`,
+    width && `w_${width}`,
+    height && `h_${height}`,
+  ].filter(Boolean);
+
+  const transformPath = transformations.length
+    ? `${transformations.join(",")}/`
+    : "";
+
   const cleanPublicId = src.replace(/^\/+/, "");
-  const transformPath = transformString ? `${transformString}/` : "";
-  return `https://res.cloudinary.com/${DEFAULT_CLOUD_NAME}/image/upload/${transformPath}${cleanPublicId}`;
+
+  return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/${transformPath}${cleanPublicId}`;
 }
