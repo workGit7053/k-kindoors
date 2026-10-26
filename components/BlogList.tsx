@@ -43,8 +43,8 @@ export default function BlogList({ posts, categories }: BlogListProps) {
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-full px-4 py-2 text-xs font-semibold transition-all ${
                   isSelected
-                    ? "bg-[#687344] text-white shadow-sm"
-                    : "border border-[#e5e7d8] bg-white text-[#454936] hover:bg-[#f3f4eb] hover:text-[#687344]"
+                    ? "bg-gradient-to-r from-[#0F8F7E] to-[#0D7A6B] text-white shadow-md shadow-[#0F8F7E]/20"
+                    : "border border-[#E5E7EB] bg-white text-[#6B7280] hover:border-[#0F8F7E]/40 hover:bg-[#E3F4F1]/50 hover:text-[#0F8F7E]"
                 }`}
               >
                 {cat}
@@ -60,11 +60,11 @@ export default function BlogList({ posts, categories }: BlogListProps) {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search windows, doors, guides..."
-            className="w-full rounded-full border border-[#e5e7d8] bg-white px-4 py-2 pl-9 text-xs text-[#2f331f] placeholder:text-gray-400 focus:border-[#687344] focus:outline-none focus:ring-1 focus:ring-[#687344]"
+            className="w-full rounded-full border border-[#E5E7EB] bg-white px-4 py-2 pl-9 text-xs text-[#1E2328] placeholder:text-[#6B7280] focus:border-[#0F8F7E] focus:outline-none focus:ring-1 focus:ring-[#0F8F7E]"
           />
           <svg
             aria-hidden="true"
-            className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"
+            className="absolute left-3 top-2.5 h-4 w-4 text-[#6B7280]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -80,7 +80,7 @@ export default function BlogList({ posts, categories }: BlogListProps) {
             <button
               type="button"
               onClick={() => setSearchQuery("")}
-              className="absolute right-3 top-2.5 text-xs text-gray-400 hover:text-gray-600"
+              className="absolute right-3 top-2.5 text-xs text-[#6B7280] hover:text-[#1E2328]"
               aria-label="Clear search"
             >
               ✕
@@ -90,10 +90,10 @@ export default function BlogList({ posts, categories }: BlogListProps) {
       </div>
 
       {/* Results Header */}
-      <div className="flex items-center justify-between border-b border-[#e5e7d8] pb-4 text-xs text-gray-500">
+      <div className="flex items-center justify-between border-b border-[#E5E7EB] pb-4 text-xs text-[#6B7280]">
         <span>
           Showing{" "}
-          <strong className="text-[#2f331f]">{filteredPosts.length}</strong>{" "}
+          <strong className="text-[#1E2328]">{filteredPosts.length}</strong>{" "}
           {filteredPosts.length === 1 ? "article" : "articles"}
           {selectedCategory !== "All" && ` in ${selectedCategory}`}
           {searchQuery && ` matching "${searchQuery}"`}
@@ -105,7 +105,7 @@ export default function BlogList({ posts, categories }: BlogListProps) {
               setSelectedCategory("All");
               setSearchQuery("");
             }}
-            className="font-medium text-[#687344] underline hover:text-[#49512d]"
+            className="font-medium text-[#0F8F7E] underline hover:text-[#0D7A6B]"
           >
             Reset filters
           </button>
@@ -121,14 +121,14 @@ export default function BlogList({ posts, categories }: BlogListProps) {
         </div>
       ) : (
         /* Empty State */
-        <div className="rounded-2xl border border-dashed border-[#d8dac7] bg-white p-12 text-center">
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#f3f4eb] text-2xl text-[#687344]">
+        <div className="rounded-2xl border border-dashed border-[#D1D5DB] bg-white p-12 text-center">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[#E3F4F1] to-[#C9EEE7] text-2xl text-[#0F8F7E]">
             🔍
           </div>
-          <h3 className="mt-4 text-base font-semibold text-[#2f331f]">
+          <h3 className="mt-4 text-base font-semibold text-[#1E2328]">
             No articles found
           </h3>
-          <p className="mt-2 text-xs text-gray-500">
+          <p className="mt-2 text-xs text-[#6B7280]">
             We couldn&apos;t find any articles matching your search criteria. Try
             adjusting your keywords or category filter.
           </p>
@@ -138,7 +138,7 @@ export default function BlogList({ posts, categories }: BlogListProps) {
               setSelectedCategory("All");
               setSearchQuery("");
             }}
-            className="mt-6 rounded-full bg-[#687344] px-5 py-2 text-xs font-semibold text-white transition-colors hover:bg-[#515b32]"
+            className="mt-6 rounded-full bg-gradient-to-r from-[#0F8F7E] to-[#0D7A6B] px-5 py-2 text-xs font-semibold text-white shadow-md shadow-[#0F8F7E]/20 transition-all hover:from-[#14A693] hover:to-[#0F8F7E]"
           >
             View All Articles
           </button>

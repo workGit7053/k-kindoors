@@ -23,28 +23,28 @@ export default function HeroSection({
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
         {/* Left Content */}
         <div>
-          <span className="inline-block rounded-full bg-[#f0f2e8] px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-[#687344]">
+          <span className="inline-block rounded-full border border-[#A7E0D6]/60 bg-[#E3F4F1] px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#0F8F7E]">
             {subtitle}
           </span>
 
-          <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-[#222515] sm:text-5xl lg:text-6xl">
+          <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-[#1E2328] sm:text-5xl lg:text-6xl">
             {title}
           </h1>
 
-          <p className="mt-6 text-base leading-relaxed text-gray-600 sm:text-lg">
+          <p className="mt-6 text-base leading-relaxed text-[#6B7280] sm:text-lg">
             {description}
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
               href={buttonLink}
-              className="inline-flex items-center justify-center rounded-full bg-[#687344] px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#525b33]"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#0F8F7E] to-[#0D7A6B] px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#0F8F7E]/25 transition-all hover:from-[#14A693] hover:to-[#0F8F7E] hover:shadow-xl hover:shadow-[#0F8F7E]/30"
             >
               {buttonText}
             </Link>
             <Link
               href="/blog"
-              className="inline-flex items-center justify-center rounded-full border border-[#d8dac7] bg-white px-7 py-3.5 text-sm font-semibold text-[#3e4428] transition-colors hover:bg-[#f3f4eb]"
+              className="inline-flex items-center justify-center rounded-full border border-[#E5E7EB] bg-white px-7 py-3.5 text-sm font-semibold text-[#1E2328] shadow-sm transition-all hover:border-[#0F8F7E]/50 hover:bg-[#E3F4F1]/40 hover:text-[#0F8F7E]"
             >
               Read Window & Door Guides →
             </Link>
@@ -52,7 +52,7 @@ export default function HeroSection({
         </div>
 
         {/* Right Image */}
-        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-[#e5e7d8] bg-gray-100 shadow-xl">
+        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-[#E5E7EB] bg-white shadow-2xl ring-1 ring-[#0F8F7E]/10">
           <Image
             src={image}
             alt={title}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import {
   getAllBlogPosts,
@@ -59,7 +60,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function BlogPostPage({ params }: Props) {
+function BlogDetailSkeleton() {
+  return (
+    <div className="min-h-screen bg-[#F5F7F8] py-10 animate-pulse">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="h-4 w-44 rounded-full bg-gray-200 mb-6" />
+        <div className="h-6 w-24 rounded-full bg-gray-200 mb-4" />
+        <div className="h-10 w-3/4 rounded-xl bg-gray-200 mb-4" />
+        <div className="h-5 w-1/2 rounded-lg bg-gray-200 mb-8" />
+        <div className="aspect-[16/9] w-full rounded-3xl bg-gray-200 mb-12 shadow-sm" />
+        <div className="space-y-4">
+          <div className="h-4 w-full rounded bg-gray-200" />
+          <div className="h-4 w-full rounded bg-gray-200" />
+          <div className="h-4 w-5/6 rounded bg-gray-200" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+async function BlogPostContent({ params }: Props) {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
 
@@ -81,62 +101,62 @@ export default async function BlogPostPage({ params }: Props) {
     quality: "auto",
   });
 
-  const whatsappInquiryUrl = `https://wa.me/YOUR_PHONE_NUMBER?text=${encodeURIComponent(
+  const whatsappInquiryUrl = `https://wa.me/9318335415?text=${encodeURIComponent(
     `Hi KK Indoors, I read your article "${post.title}" and would like to inquire about similar windows or doors for my project.`
   )}`;
 
   return (
-    <div className="min-h-screen bg-[#fafaf7] py-10">
+    <div className="min-h-screen bg-[#F5F7F8] py-10">
       <article className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="mb-6">
-          <ol className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
+          <ol className="flex flex-wrap items-center gap-2 text-xs text-[#6B7280]">
             <li>
-              <Link href="/" className="hover:text-[#687344]">
+              <Link href="/" className="hover:text-[#0F8F7E]">
                 Home
               </Link>
             </li>
             <li>/</li>
             <li>
-              <Link href="/blog" className="hover:text-[#687344]">
+              <Link href="/blog" className="hover:text-[#0F8F7E]">
                 Blog
               </Link>
             </li>
             <li>/</li>
-            <li className="font-semibold text-[#687344]">{post.category}</li>
+            <li className="font-semibold text-[#0F8F7E]">{post.category}</li>
           </ol>
         </nav>
 
         {/* Post Header */}
         <header className="mb-8">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="rounded-full bg-[#687344] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white">
+            <span className="rounded-full bg-gradient-to-r from-[#0F8F7E] to-[#0D7A6B] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm shadow-[#0F8F7E]/20">
               {post.category}
             </span>
-            <span className="text-xs text-gray-500">
+            <span className="text-xs text-[#6B7280]">
               {post.readingTime}
             </span>
             <span className="text-xs text-gray-400">•</span>
             <time
               dateTime={post.publishedAt}
-              className="text-xs text-gray-500"
+              className="text-xs text-[#6B7280]"
             >
               {formattedDate}
             </time>
           </div>
 
-          <h1 className="mt-4 text-3xl font-extrabold leading-tight text-[#222515] sm:text-4xl lg:text-5xl">
+          <h1 className="mt-4 text-3xl font-extrabold leading-tight text-[#1E2328] sm:text-4xl lg:text-5xl">
             {post.title}
           </h1>
 
           {post.subtitle && (
-            <p className="mt-3 text-lg font-medium text-gray-600 sm:text-xl">
+            <p className="mt-3 text-lg font-medium text-[#6B7280] sm:text-xl">
               {post.subtitle}
             </p>
           )}
 
           {/* Author info & Actions */}
-          <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-y border-[#e5e7d8] py-4">
+          <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-y border-[#E5E7EB] py-4">
             <div className="flex items-center gap-3">
               <div className="relative h-12 w-12 overflow-hidden rounded-full bg-gray-200">
                 <Image
@@ -152,10 +172,10 @@ export default async function BlogPostPage({ params }: Props) {
                 />
               </div>
               <div>
-                <p className="text-sm font-bold text-[#222515]">
+                <p className="text-sm font-bold text-[#1E2328]">
                   {post.author.name}
                 </p>
-                <p className="text-xs text-gray-500">{post.author.role}</p>
+                <p className="text-xs text-[#6B7280]">{post.author.role}</p>
               </div>
             </div>
 
@@ -163,7 +183,7 @@ export default async function BlogPostPage({ params }: Props) {
               href={whatsappInquiryUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-[#687344] px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-[#525b33]"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#0F8F7E] to-[#0D7A6B] px-5 py-2.5 text-xs font-semibold text-white shadow-md shadow-[#0F8F7E]/20 transition-all hover:from-[#14A693] hover:to-[#0F8F7E]"
             >
               <span>💬</span>
               <span>Ask an Expert on WhatsApp</span>
@@ -172,7 +192,7 @@ export default async function BlogPostPage({ params }: Props) {
         </header>
 
         {/* Cloudinary Cover Image */}
-        <div className="relative mb-12 aspect-[16/9] w-full overflow-hidden rounded-3xl border border-[#e5e7d8] bg-gray-100 shadow-md">
+        <div className="relative mb-12 aspect-[16/9] w-full overflow-hidden rounded-3xl border border-[#E5E7EB] bg-white shadow-xl ring-1 ring-[#0F8F7E]/10">
           <Image
             src={heroImageUrl}
             alt={post.title}
@@ -184,24 +204,24 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         {/* Article Body Content */}
-        <div className="space-y-10 text-[#303322]">
+        <div className="space-y-10 text-[#374151]">
           {post.sections.map((section, index) => (
             <section key={index} className="space-y-4">
-              <h2 className="text-2xl font-bold tracking-tight text-[#222515] sm:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-[#1E2328] sm:text-3xl">
                 {section.heading}
               </h2>
 
               {section.paragraphs.map((p, pIdx) => (
-                <p key={pIdx} className="text-base leading-relaxed text-gray-700 sm:text-lg">
+                <p key={pIdx} className="text-base leading-relaxed text-[#374151] sm:text-lg">
                   {p}
                 </p>
               ))}
 
               {section.bulletPoints && section.bulletPoints.length > 0 && (
-                <ul className="my-4 space-y-2.5 rounded-2xl bg-white p-6 shadow-sm border border-[#e5e7d8]">
+                <ul className="my-4 space-y-2.5 rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
                   {section.bulletPoints.map((item, bIdx) => (
-                    <li key={bIdx} className="flex items-start gap-3 text-sm text-gray-700 sm:text-base">
-                      <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#eef1e2] text-xs font-bold text-[#687344]">
+                    <li key={bIdx} className="flex items-start gap-3 text-sm text-[#374151] sm:text-base">
+                      <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#E3F4F1] text-xs font-bold text-[#0F8F7E]">
                         ✓
                       </span>
                       <span>{item}</span>
@@ -215,7 +235,7 @@ export default async function BlogPostPage({ params }: Props) {
                   className={`rounded-2xl p-6 border ${
                     section.callout.type === "important"
                       ? "border-amber-200 bg-amber-50 text-amber-900"
-                      : "border-[#dce1cb] bg-[#f5f7ed] text-[#3e4428]"
+                      : "border-[#A7E0D6] bg-gradient-to-r from-[#E3F4F1] to-[#F0FAF8] text-[#0D6256]"
                   }`}
                 >
                   {section.callout.title && (
@@ -233,15 +253,15 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         {/* Tags */}
-        <div className="mt-12 border-t border-[#e5e7d8] pt-6">
-          <p className="text-xs font-bold uppercase tracking-wider text-gray-400">
+        <div className="mt-12 border-t border-[#E5E7EB] pt-6">
+          <p className="text-xs font-bold uppercase tracking-wider text-[#6B7280]">
             Article Topics:
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-lg bg-white border border-[#e5e7d8] px-3 py-1.5 text-xs font-medium text-[#4b5230]"
+                className="rounded-lg border border-[#E5E7EB] bg-white px-3 py-1.5 text-xs font-medium text-[#0F8F7E] transition-colors hover:bg-[#E3F4F1]"
               >
                 #{tag}
               </span>
@@ -250,7 +270,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         {/* Author Bio Box */}
-        <div className="mt-10 rounded-2xl border border-[#e5e7d8] bg-white p-6 shadow-sm sm:p-8">
+        <div className="mt-10 rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm sm:p-8">
           <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-start">
             <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full bg-gray-200">
               <Image
@@ -266,16 +286,16 @@ export default async function BlogPostPage({ params }: Props) {
               />
             </div>
             <div className="text-center sm:text-left">
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#687344]">
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#0F8F7E]">
                 About the Author
               </p>
-              <h3 className="text-lg font-bold text-[#222515]">
+              <h3 className="text-lg font-bold text-[#1E2328]">
                 {post.author.name}
               </h3>
-              <p className="text-xs font-medium text-gray-500">
+              <p className="text-xs font-medium text-[#6B7280]">
                 {post.author.role} at KK Indoors
               </p>
-              <p className="mt-2 text-xs leading-relaxed text-gray-600 sm:text-sm">
+              <p className="mt-2 text-xs leading-relaxed text-[#6B7280] sm:text-sm">
                 Specializing in fenestration architecture, high-performance acoustic glass systems, and thermally-broken aluminium door installations.
               </p>
             </div>
@@ -283,11 +303,11 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         {/* CTA Box */}
-        <div className="mt-12 overflow-hidden rounded-3xl bg-[#353a26] p-8 text-center text-white sm:p-10">
+        <div className="mt-12 overflow-hidden rounded-3xl border border-[#2D3339] bg-gradient-to-br from-[#1E2328] via-[#242A30] to-[#0F8F7E]/30 p-8 text-center text-white shadow-2xl sm:p-10">
           <h2 className="text-2xl font-bold sm:text-3xl">
             Want to Discuss Windows & Doors for Your Project?
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-[#d4d9be] sm:text-base">
+          <p className="mx-auto mt-3 max-w-xl text-sm text-[#D1D5DB] sm:text-base">
             Send us your window schedules or architectural plans on WhatsApp. Our engineers will recommend the best UPVC or aluminium systems and provide free estimates.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
@@ -295,14 +315,14 @@ export default async function BlogPostPage({ params }: Props) {
               href={whatsappInquiryUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-[#7d8c4e] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#687344]"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#0F8F7E] to-[#0D7A6B] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#0F8F7E]/30 transition-all hover:from-[#14A693] hover:to-[#0F8F7E]"
             >
               <span>Get WhatsApp Quotation</span>
               <span>→</span>
             </a>
             <Link
               href="/blog"
-              className="inline-flex items-center rounded-full border border-[#869168] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
             >
               Browse More Articles
             </Link>
@@ -311,19 +331,19 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Related Articles */}
         {relatedPosts.length > 0 && (
-          <section className="mt-16 border-t border-[#e5e7d8] pt-12">
+          <section className="mt-16 border-t border-[#E5E7EB] pt-12">
             <div className="mb-8 flex items-center justify-between">
               <div>
-                <p className="text-xs font-bold uppercase tracking-wider text-[#687344]">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#0F8F7E]">
                   More in {post.category}
                 </p>
-                <h2 className="text-2xl font-bold text-[#222515]">
+                <h2 className="text-2xl font-bold text-[#1E2328]">
                   Related Articles
                 </h2>
               </div>
               <Link
                 href="/blog"
-                className="text-xs font-semibold text-[#687344] hover:underline"
+                className="text-xs font-semibold text-[#0F8F7E] hover:underline"
               >
                 View all →
               </Link>
@@ -340,3 +360,12 @@ export default async function BlogPostPage({ params }: Props) {
     </div>
   );
 }
+
+export default function BlogPostPage(props: Props) {
+  return (
+    <Suspense fallback={<BlogDetailSkeleton />}>
+      <BlogPostContent params={props.params} />
+    </Suspense>
+  );
+}
+

@@ -23,7 +23,7 @@ export default function BlogCard({ post, priority = false }: BlogCardProps) {
   });
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl border border-[#e5e7d8] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#0F8F7E]/40 hover:shadow-xl hover:shadow-[#0F8F7E]/10">
       {/* Cover Image */}
       <Link
         href={`/blog/${post.slug}`}
@@ -38,7 +38,7 @@ export default function BlogCard({ post, priority = false }: BlogCardProps) {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute left-4 top-4">
-          <span className="inline-flex items-center rounded-full bg-[#687344] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm">
+          <span className="inline-flex items-center rounded-full bg-gradient-to-r from-[#0F8F7E] to-[#0D7A6B] px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm shadow-[#0F8F7E]/20">
             {post.category}
           </span>
         </div>
@@ -47,19 +47,19 @@ export default function BlogCard({ post, priority = false }: BlogCardProps) {
       {/* Card Content */}
       <div className="flex flex-1 flex-col p-6">
         {/* Meta Info */}
-        <div className="flex items-center gap-3 text-xs text-gray-500">
+        <div className="flex items-center gap-3 text-xs text-[#6B7280]">
           <time dateTime={post.publishedAt}>{formattedDate}</time>
           <span>•</span>
           <span>{post.readingTime}</span>
         </div>
 
         {/* Title */}
-        <h3 className="mt-3 text-xl font-bold leading-snug text-[#2f331f] transition-colors group-hover:text-[#687344]">
+        <h3 className="mt-3 text-xl font-bold leading-snug text-[#1E2328] transition-colors group-hover:text-[#0F8F7E]">
           <Link href={`/blog/${post.slug}`}>{post.title}</Link>
         </h3>
 
         {/* Excerpt */}
-        <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-gray-600">
+        <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-[#6B7280]">
           {post.excerpt}
         </p>
 
@@ -68,7 +68,7 @@ export default function BlogCard({ post, priority = false }: BlogCardProps) {
           {post.tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className="rounded-md bg-[#f3f4eb] px-2 py-0.5 text-xs text-[#525a33]"
+              className="rounded-md bg-[#E3F4F1] px-2.5 py-1 text-xs font-medium text-[#0F8F7E] transition-colors hover:bg-[#D5EFEA]"
             >
               #{tag}
             </span>
@@ -76,7 +76,7 @@ export default function BlogCard({ post, priority = false }: BlogCardProps) {
         </div>
 
         {/* Author Footer */}
-        <div className="mt-6 flex items-center justify-between border-t border-[#f0f2e8] pt-4">
+        <div className="mt-6 flex items-center justify-between border-t border-[#E5E7EB] pt-4">
           <div className="flex items-center gap-3">
             <div className="relative h-9 w-9 overflow-hidden rounded-full bg-gray-200">
               <Image
@@ -92,16 +92,16 @@ export default function BlogCard({ post, priority = false }: BlogCardProps) {
               />
             </div>
             <div>
-              <p className="text-xs font-semibold text-[#2f331f]">
+              <p className="text-xs font-semibold text-[#1E2328]">
                 {post.author.name}
               </p>
-              <p className="text-[11px] text-gray-500">{post.author.role}</p>
+              <p className="text-[11px] text-[#6B7280]">{post.author.role}</p>
             </div>
           </div>
 
           <Link
             href={`/blog/${post.slug}`}
-            className="text-xs font-semibold text-[#687344] transition-colors hover:text-[#49512d]"
+            className="text-xs font-semibold text-[#0F8F7E] transition-colors hover:text-[#0D7A6B]"
           >
             Read More →
           </Link>
