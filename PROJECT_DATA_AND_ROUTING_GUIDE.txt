@@ -1,0 +1,403 @@
+================================================================================
+                    KK INDOORS — COMPLETE DATA & ROUTING GUIDE
+================================================================================
+This document provides an exact reference for:
+ 1. Which dummy data is located in which file.
+ 2. How every URL path routes to its file in the App Router.
+ 3. Exactly where and how you can change text, images, products, and links.
+ 4. How to add new pages, products, or blog articles.
+================================================================================
+
+
+--------------------------------------------------------------------------------
+1. WHICH DUMMY DATA IS WHERE?
+--------------------------------------------------------------------------------
+
+[A] HOMEPAGE HERO DATA
+    * File Path: data/heroData.ts
+    * What it contains:
+      - title: Main heading on the homepage ("Transform Your Space")
+      - subtitle: Eyebrow badge text ("Premium Windows & Doors")
+      - description: Introductory paragraph
+      - image: Cloudinary image URL for the main hero showcase
+      - buttonText: Label for the primary CTA button ("Explore Products")
+      - buttonLink: Target URL ("/products")
+    * Where it is displayed:
+      - Rendered by app/page.tsx through components/HeroSection.tsx
+
+
+[B] WINDOWS & DOORS PRODUCT DATA
+    * File Path: data/products.ts
+    * TypeScript Model: types/product.ts
+    * What it contains:
+      - Array `productsData` containing 9 detailed products:
+        4 Windows:
+          1. Slimline Aluminium Sliding Windows (slug: "slimline-aluminium-sliding-windows")
+          2. UPVC Multi-Chamber Casement Windows (slug: "upvc-thermal-casement-windows")
+          3. Architectural Aluminium Tilt & Turn Windows (slug: "architectural-aluminium-tilt-turn-windows")
+          4. UPVC Smooth-Glide Sliding Windows (slug: "upvc-smooth-glide-sliding-windows")
+        5 Doors:
+          1. Heavy-Duty Aluminium Sliding Patio Doors (slug: "heavy-duty-aluminium-sliding-patio-doors")
+          2. Oversized Architectural Pivot Entrance Doors (slug: "oversized-architectural-pivot-entrance-doors")
+          3. UPVC Multi-Chamber Balcony Sliding Doors (slug: "upvc-multi-chamber-balcony-sliding-doors")
+          4. Frameless Toughened Glass Doors & Partitions (slug: "frameless-toughened-glass-doors")
+          5. Aluminium Bi-Fold Panoramic Folding Doors (slug: "aluminium-bifold-folding-patio-doors")
+      - For each product:
+        * id: Unique ID (e.g., "win-1", "door-1")
+        * slug: URL identifier
+        * title: Product name
+        * tagline: One-line architectural selling point
+        * category: "windows" or "doors"
+        * subCategory: "aluminium", "upvc", "sliding", "glass", "pivot", etc.
+        * image: Cloudinary URL
+        * description: Full marketing & technical explanation
+        * keyFeatures: Bullet point array of engineering specs
+        * specs: Object with profileDepth, glassOptions, soundInsulation,
+                 thermalPerformance, hardware, warranty
+        * bestFor: Ideal architectural placement (e.g., "Living rooms, high-rise luxury apartments")
+        * guideSlug: Links to a matching educational blog article
+    * Where it is displayed:
+      - app/products/page.tsx (All products overview)
+      - app/products/windows/page.tsx (Windows Hub)
+      - app/products/windows/[category]/page.tsx (Aluminium/UPVC/Sliding window filters)
+      - app/products/doors/page.tsx (Doors Hub)
+      - app/products/doors/[category]/page.tsx (Aluminium/UPVC/Sliding/Glass door filters)
+
+
+[C] BLOG POSTS & KNOWLEDGE HUB DATA
+    * File Path: data/blogs.ts
+    * TypeScript Model: types/blog.ts
+    * What it contains:
+      - Array `dummyBlogPosts` containing 6 comprehensive architectural articles:
+        1. "UPVC vs Aluminium Windows: Which is Better for Your Home?"
+           (slug: "upvc-vs-aluminium-windows-comparison")
+        2. "The Ultimate Guide to Modern Sliding Glass Doors"
+           (slug: "modern-sliding-glass-doors-guide")
+        3. "How Double Glazed Windows Cut Energy Bills & Block Street Noise"
+           (slug: "double-glazed-windows-energy-efficiency")
+        4. "Top 7 Front Door Styles That Elevate Curb Appeal in 2026"
+           (slug: "top-front-door-styles-curb-appeal")
+        5. "Soundproof Windows for City Living: Say Goodbye to Traffic Noise"
+           (slug: "soundproof-windows-city-living")
+        6. "Essential Care & Maintenance for Sliding Doors and Windows"
+           (slug: "maintenance-guide-doors-windows")
+      - For each article:
+        * id & slug: URL slug (e.g. /blog/upvc-vs-aluminium-windows-comparison)
+        * title & subtitle: Main article headline & subhead
+        * excerpt: Summary shown on cards & search previews
+        * category: "Windows", "Doors", "Energy & Insulation", "Design & Trends", or "Maintenance & Care"
+        * coverImage: Cloudinary image URL
+        * author: Object with name, role, and avatar Cloudinary image URL
+        * publishedAt: Publication date string (e.g., "2026-10-18")
+        * readingTime: e.g., "6 min read"
+        * featured: boolean (true = shown as large hero banner on /blog)
+        * tags: Array of topic keywords (e.g., ["UPVC", "Aluminium", "Buying Guide"])
+        * sections: Array of content blocks with heading, paragraphs[],
+                    bulletPoints[], and callout boxes (tip, important, quote)
+    * Where it is displayed:
+      - app/page.tsx (Latest 3 guides preview on homepage)
+      - app/blog/page.tsx (Full searchable and filterable blog directory)
+      - app/blog/[slug]/page.tsx (Individual full article reading page)
+
+
+[D] CONTACT CHANNELS, PHONE NUMBERS & GOOGLE MAP
+    * Primary File Path: app/contact/page.tsx
+    * Form Component: components/ContactForm.tsx
+    * What it contains:
+      - `CONTACT_CONFIG` object at lines 15-46 in app/contact/page.tsx:
+        * whatsapp.display: Display text (e.g., "+91 93183 35415")
+        * whatsapp.link: Direct WhatsApp URL with prefilled text
+        * phone.display: Phone number
+        * phone.link: "tel:+919318335415"
+        * email.display: "contact@kkindoors.com"
+        * email.link: "mailto:contact@kkindoors.com"
+        * location.name: Showroom / Factory name
+        * location.addressLine1: Street & plot address
+        * location.addressLine2: City, state, pincode, country
+        * location.directionsUrl: Google Maps pin URL
+        * location.hours: Visiting hours
+        * mapEmbedUrl: Google Maps iframe embed URL
+      - `WHATSAPP_PHONE` constant in components/ContactForm.tsx:
+        * Phone number used when forwarding submitted form inquiries to WhatsApp
+
+
+[E] NAVIGATION MENUS & HEADER / FOOTER
+    * Header File: components/Navbar.tsx
+      - Contains `navLinks` array defining the top menu and dropdowns:
+        * Home ("/")
+        * Windows ("/products/windows") -> Submenu with Aluminium, UPVC, Sliding
+        * Doors ("/products/doors") -> Submenu with Aluminium, UPVC, Sliding, Glass
+        * Blog ("/blog")
+        * About Us ("/about")
+        * Contact ("/contact")
+        * Top quote button WhatsApp URL
+    * Footer File: components/Footer.tsx
+      - Brand description paragraph
+      - Columns of navigation links to Windows, Doors, Blog guides, and Company pages
+      - Copyright year and legal links
+
+
+--------------------------------------------------------------------------------
+2. ROUTING MAP (HOW EVERY URL ROUTES TO A PAGE)
+--------------------------------------------------------------------------------
+
+When a visitor visits a URL in their browser, Next.js App Router matches it
+to a specific file in the `app/` folder. Here is the complete routing table:
+
+URL Path                     File Path                             Type & Notes
+--------------------------------------------------------------------------------
+/                            app/page.tsx                          Static Page
+                             - Shows HeroSection + Value Highlights + 3 Latest Blog Posts
+
+/about                       app/about/page.tsx                    Static Page
+                             - Company story, engineering values & consultation CTA
+
+/contact                     app/contact/page.tsx                  Static + Client Form
+                             - Contact channels with logos, Google Map & ContactForm
+
+/products                    app/products/page.tsx                 Static Page
+                             - Overview hub with Windows & Doors department cards
+
+/products/windows            app/products/windows/page.tsx         Static Page
+                             - All Windows collection + Material comparison table
+
+/products/windows/aluminium  app/products/windows/[category]/page.tsx  Dynamic Sub-category
+/products/windows/upvc       app/products/windows/[category]/page.tsx  (Pre-rendered at build
+/products/windows/sliding    app/products/windows/[category]/page.tsx   via generateStaticParams)
+
+/products/doors              app/products/doors/page.tsx           Static Page
+                             - All Doors collection + Hardware engineering breakdown
+
+/products/doors/aluminium    app/products/doors/[category]/page.tsx    Dynamic Sub-category
+/products/doors/upvc         app/products/doors/[category]/page.tsx    (Pre-rendered at build
+/products/doors/sliding      app/products/doors/[category]/page.tsx     via generateStaticParams)
+/products/doors/glass        app/products/doors/[category]/page.tsx
+
+/blog                        app/blog/page.tsx                     Static + Client List
+                             - Featured story hero + BlogList with live search & filters
+
+/blog/[slug]                 app/blog/[slug]/page.tsx              Dynamic Route
+                             - Reads slug from URL (e.g. /blog/upvc-vs-aluminium-windows-comparison)
+                             - Wrapped in React <Suspense> for Instant Navigation
+                             - Includes Schema.org JSON-LD structured data for Google
+                             - Pre-renders all 6 articles at build time
+
+/sitemap.xml                 app/sitemap.ts                        Automatic XML Sitemap
+                             - Tells Google and Bing about all product and blog URLs
+
+/robots.txt                  app/robots.ts                         Crawler Instructions
+                             - Defines search engine indexing rules and links to sitemap
+
+
+--------------------------------------------------------------------------------
+3. HOW TO CHANGE PAGES & DATA (STEP-BY-STEP)
+--------------------------------------------------------------------------------
+
+================================================================================
+STEP 3.1: HOW TO CHANGE PHONE NUMBERS, WHATSAPP & EMAIL
+================================================================================
+There are 4 locations where contact info is referenced:
+
+1. Contact Page Details & Google Maps:
+   Open: app/contact/page.tsx
+   Find lines 14-45 (the `CONTACT_CONFIG` object).
+   Change:
+     whatsapp: { display: "YOUR_PHONE", link: "https://wa.me/YOUR_PHONE?text=..." }
+     phone: { display: "YOUR_PHONE", link: "tel:YOUR_PHONE" }
+     email: { display: "YOUR_EMAIL", link: "mailto:YOUR_EMAIL" }
+
+2. Contact Form WhatsApp forwarder:
+   Open: components/ContactForm.tsx
+   Find line 9:
+     const WHATSAPP_PHONE = "YOUR_NUMBER_WITHOUT_PLUS"; // e.g. "919876543210"
+
+3. Header Navbar "Get a Quote" Button:
+   Open: components/Navbar.tsx
+   Find line 35:
+     const WHATSAPP_LINK = "https://wa.me/YOUR_PHONE_NUMBER";
+
+4. Footer WhatsApp Button:
+   Open: components/Footer.tsx
+   Find line 3:
+     const WHATSAPP_LINK = "https://wa.me/YOUR_PHONE_NUMBER";
+
+
+================================================================================
+STEP 3.2: HOW TO CHANGE THE GOOGLE MAP LOCATION
+================================================================================
+1. Open https://maps.google.com in your web browser.
+2. Search your exact shop, factory, showroom, or office address.
+3. Click the "Share" button on Google Maps.
+4. Select the "Embed a map" tab.
+5. In the HTML code provided by Google, copy ONLY the web address inside src="...".
+   Example:
+   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!..."
+6. Open: app/contact/page.tsx
+7. Find `mapEmbedUrl` inside `CONTACT_CONFIG` (around line 38).
+8. Paste your copied Google Maps URL as the new value.
+9. Also update `addressLine1`, `addressLine2`, and `directionsUrl` in the same object.
+
+
+================================================================================
+STEP 3.3: HOW TO ADD OR EDIT A WINDOW OR DOOR PRODUCT
+================================================================================
+1. Open: data/products.ts
+2. To EDIT an existing product:
+   Find the product in the `productsData` array and modify its title, image,
+   description, specs, or keyFeatures.
+3. To ADD A NEW PRODUCT:
+   Add a new object to `productsData` following this template:
+
+   {
+     id: "win-5",                                       // Unique ID
+     slug: "casement-french-windows",                   // Unique URL slug
+     title: "UPVC French Casement Windows",             // Product Name
+     tagline: "Unobstructed double opening without central mullion",
+     category: "windows",                               // "windows" or "doors"
+     subCategory: "upvc",                               // "aluminium", "upvc", "sliding", or "glass"
+     image: "https://res.cloudinary.com/demo/image/upload/sample.jpg", // Image URL
+     description: "Detailed description of the window or door...",
+     keyFeatures: [
+       "Feature point 1",
+       "Feature point 2",
+       "Feature point 3"
+     ],
+     specs: {
+       profileDepth: "60mm multi-chamber",
+       glassOptions: "Double-glazed 24mm",
+       soundInsulation: "Up to 36 dB",
+       thermalPerformance: "U-value ≤ 1.4",
+       hardware: "Multi-point locking shootbolts",
+       warranty: "15-year warranty"
+     },
+     bestFor: "Balconies, master bedrooms, and heritage villas",
+     guideSlug: "upvc-vs-aluminium-windows-comparison" // Optional blog guide link
+   }
+
+The new product will automatically appear on:
+- /products (All Products)
+- /products/windows (if category is "windows")
+- /products/doors (if category is "doors")
+- The respective sub-category page (e.g. /products/windows/upvc)
+
+
+================================================================================
+STEP 3.4: HOW TO ADD OR EDIT A BLOG ARTICLE
+================================================================================
+1. Open: data/blogs.ts
+2. To EDIT an article:
+   Find the article by its `slug` and update paragraphs, headings, or tips.
+3. To ADD A NEW ARTICLE:
+   Add a new object to the `dummyBlogPosts` array:
+
+   {
+     id: "7",
+     slug: "how-to-choose-balcony-doors",
+     title: "How to Choose the Best Balcony Doors for High-Rise Apartments",
+     subtitle: "Wind resistance, water tightness, and child safety considerations.",
+     excerpt: "A guide on selecting balcony doors that withstand monsoons and high winds...",
+     category: "Doors", // "Windows", "Doors", "Energy & Insulation", "Design & Trends", or "Maintenance & Care"
+     coverImage: "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+     author: {
+       name: "Rajesh Sharma",
+       role: "Senior Architectural Consultant",
+       avatar: "https://res.cloudinary.com/demo/image/upload/samples/people/smiling-man.jpg"
+     },
+     publishedAt: "2026-10-27",
+     readingTime: "5 min read",
+     featured: false, // Set to true to make it the top hero banner on /blog
+     tags: ["Balcony Doors", "Sliding Doors", "Wind Resistance"],
+     sections: [
+       {
+         heading: "1. Why High-Rise Balconies Demand Heavy-Duty Doors",
+         paragraphs: [
+           "At elevations above the 10th floor, wind pressures increase exponentially...",
+           "Standard sliding doors without wind load reinforcements can rattle..."
+         ],
+         bulletPoints: [
+           "Look for heavy-duty interlocks with structural steel stiffeners.",
+           "Ensure bottom tracks have calibrated drainage weep holes."
+         ],
+         callout: {
+           type: "tip", // "tip" or "important"
+           title: "Safety First",
+           text: "Always specify toughened tempered safety glass (minimum 8mm-10mm) for balcony doors."
+         }
+       }
+     ]
+   }
+
+Next.js will automatically:
+- Render it in the `/blog` index grid.
+- Enable live category filtering and search for it.
+- Statically pre-render the full article at `/blog/how-to-choose-balcony-doors`.
+
+
+================================================================================
+STEP 3.5: HOW TO USE YOUR OWN CLOUDINARY ACCOUNT
+================================================================================
+1. By default, the site uses Cloudinary's demo cloud name ("demo").
+2. To use your personal Cloudinary cloud:
+   Create a file named `.env.local` in the project root:
+   ```env
+   NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_own_cloud_name
+   ```
+3. When you upload photos to Cloudinary, you can use:
+   - Either the full URL:
+     `https://res.cloudinary.com/your_cloud/image/upload/v12345/doors/slider.jpg`
+   - Or just the Cloudinary Public ID:
+     `doors/slider`
+   The helper in `lib/cloudinary.ts` will automatically format and optimize it.
+
+
+================================================================================
+STEP 3.6: HOW TO CHANGE NAVIGATION MENUS & DROPDOWNS
+================================================================================
+1. Open: components/Navbar.tsx
+2. Find `navLinks` (lines 7-33):
+   - You can add, remove, or rename menu items.
+   - For links with dropdowns, edit the `submenu` array:
+     ```ts
+     {
+       name: "Windows",
+       href: "/products/windows",
+       submenu: [
+         { name: "All Windows", href: "/products/windows" },
+         { name: "Aluminium Windows", href: "/products/windows/aluminium" },
+         { name: "UPVC Windows", href: "/products/windows/upvc" },
+         { name: "Sliding Windows", href: "/products/windows/sliding" },
+       ]
+     }
+     ```
+
+
+================================================================================
+STEP 3.7: COLOR PALETTE & STYLING CUSTOMIZATION
+================================================================================
+All colors follow the clean Teal-and-White theme defined in:
+1. app/globals.css:
+   - Primary Teal: #0F8F7E
+   - Teal Dark: #0D7A6B
+   - Teal Light: #14A693
+   - Teal Tint: #E3F4F1 (icon circles, active pills, badges)
+   - Dark Charcoal: #1E2328 (headings, footer, dark banners)
+   - Slate Gray: #6B7280 (descriptions, dates, subheads)
+   - Soft Background: #F5F7F8 (page background, inputs)
+   - Card Background: #FFFFFF (cards, navbar)
+
+If you ever wish to modify theme colors globally, change the CSS variables
+inside `@theme inline` in `app/globals.css`.
+
+
+--------------------------------------------------------------------------------
+4. USEFUL TERMINAL COMMANDS
+--------------------------------------------------------------------------------
+- Start local dev server:        npm run dev
+- Check for TypeScript errors:   npx tsc --noEmit
+- Run ESLint check:              npm run lint
+- Build static production site:  npm run build
+- Start production server:       npm run start
+
+================================================================================
+                        END OF GUIDE DOCUMENT
+================================================================================

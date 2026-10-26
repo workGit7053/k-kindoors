@@ -10,6 +10,7 @@ import {
 } from "@/lib/blog";
 import { getCloudinaryUrl } from "@/lib/cloudinary";
 import BlogCard from "@/components/BlogCard";
+import ShareButtons from "@/components/ShareButtons";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -105,8 +106,44 @@ async function BlogPostContent({ params }: Props) {
     `Hi KK Indoors, I read your article "${post.title}" and would like to inquire about similar windows or doors for my project.`
   )}`;
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://kkindoors.com";
+  const postUrl = `${siteUrl}/blog/${post.slug}`;
+
+  // Schema.org Article Structured Data (JSON-LD) for Google Rich Snippets
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: [heroImageUrl],
+    datePublished: `${post.publishedAt}T09:00:00+05:30`,
+    dateModified: `${post.publishedAt}T09:00:00+05:30`,
+    author: {
+      "@type": "Person",
+      name: post.author.name,
+      jobTitle: post.author.role,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "KK Indoors",
+      url: siteUrl,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": postUrl,
+    },
+    articleSection: post.category,
+    keywords: post.tags.join(", "),
+  };
+
   return (
     <div className="min-h-screen bg-[#F5F7F8] py-10">
+      {/* Schema.org Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       <article className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="mb-6">
@@ -300,6 +337,11 @@ async function BlogPostContent({ params }: Props) {
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Social Share Section */}
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-sm">
+          <ShareButtons title={post.title} slug={post.slug} />
         </div>
 
         {/* CTA Box */}
