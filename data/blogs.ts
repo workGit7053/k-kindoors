@@ -14,8 +14,7 @@ export const dummyBlogPosts: BlogPost[] = [
     author: {
       name: "Rajesh Sharma",
       role: "Senior Architectural Consultant",
-      avatar:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&q=80",
+      avatar: "",
     },
     publishedAt: "2026-10-18",
     readingTime: "6 min read",
@@ -82,8 +81,7 @@ export const dummyBlogPosts: BlogPost[] = [
     author: {
       name: "Priya Nair",
       role: "Interior & Spatial Designer",
-      avatar:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80",
+      avatar: "",
     },
     publishedAt: "2026-10-12",
     readingTime: "5 min read",
@@ -136,8 +134,7 @@ export const dummyBlogPosts: BlogPost[] = [
     author: {
       name: "Amit Patel",
       role: "Sustainable Building Engineer",
-      avatar:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+      avatar: "",
     },
     publishedAt: "2026-10-05",
     readingTime: "7 min read",
@@ -185,8 +182,7 @@ export const dummyBlogPosts: BlogPost[] = [
     author: {
       name: "Priya Nair",
       role: "Interior & Spatial Designer",
-      avatar:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80",
+      avatar: "",
     },
     publishedAt: "2026-09-28",
     readingTime: "4 min read",
@@ -228,8 +224,7 @@ export const dummyBlogPosts: BlogPost[] = [
     author: {
       name: "Amit Patel",
       role: "Sustainable Building Engineer",
-      avatar:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+      avatar: "",
     },
     publishedAt: "2026-09-15",
     readingTime: "5 min read",
@@ -270,8 +265,7 @@ export const dummyBlogPosts: BlogPost[] = [
     author: {
       name: "Rajesh Sharma",
       role: "Senior Architectural Consultant",
-      avatar:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&q=80",
+      avatar: "",
     },
     publishedAt: "2026-09-02",
     readingTime: "4 min read",

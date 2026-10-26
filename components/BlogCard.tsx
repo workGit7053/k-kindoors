@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BlogPost } from "@/types/blog";
 import { getCloudinaryUrl } from "@/lib/cloudinary";
+import AuthorAvatar from "@/components/AuthorAvatar";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -78,19 +79,11 @@ export default function BlogCard({ post, priority = false }: BlogCardProps) {
         {/* Author Footer */}
         <div className="mt-6 flex items-center justify-between border-t border-[#E5E7EB] pt-4">
           <div className="flex items-center gap-3">
-            <div className="relative h-9 w-9 overflow-hidden rounded-full bg-gray-200">
-              <Image
-                src={getCloudinaryUrl(post.author.avatar, {
-                  width: 80,
-                  height: 80,
-                  crop: "thumb",
-                })}
-                alt={post.author.name}
-                fill
-                sizes="36px"
-                className="object-cover"
-              />
-            </div>
+            <AuthorAvatar
+              name={post.author.name}
+              avatar={post.author.avatar}
+              size="sm"
+            />
             <div>
               <p className="text-xs font-semibold text-[#1E2328]">
                 {post.author.name}

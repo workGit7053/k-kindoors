@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BlogPost } from "@/types/blog";
 import { getCloudinaryUrl } from "@/lib/cloudinary";
+import AuthorAvatar from "@/components/AuthorAvatar";
 
 interface FeaturedBlogHeroProps {
   post: BlogPost;
@@ -70,19 +71,11 @@ export default function FeaturedBlogHero({ post }: FeaturedBlogHeroProps) {
 
           <div className="mt-8 flex items-center justify-between border-t border-[#E5E7EB] pt-6">
             <div className="flex items-center gap-3">
-              <div className="relative h-11 w-11 overflow-hidden rounded-full bg-gray-200">
-                <Image
-                  src={getCloudinaryUrl(post.author.avatar, {
-                    width: 100,
-                    height: 100,
-                    crop: "thumb",
-                  })}
-                  alt={post.author.name}
-                  fill
-                  sizes="44px"
-                  className="object-cover"
-                />
-              </div>
+              <AuthorAvatar
+                name={post.author.name}
+                avatar={post.author.avatar}
+                size="md"
+              />
               <div>
                 <p className="text-sm font-semibold text-[#1E2328]">
                   {post.author.name}

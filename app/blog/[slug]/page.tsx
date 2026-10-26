@@ -11,6 +11,7 @@ import {
 import { getCloudinaryUrl } from "@/lib/cloudinary";
 import BlogCard from "@/components/BlogCard";
 import ShareButtons from "@/components/ShareButtons";
+import AuthorAvatar from "@/components/AuthorAvatar";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -195,19 +196,11 @@ async function BlogPostContent({ params }: Props) {
           {/* Author info & Actions */}
           <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-y border-[#E5E7EB] py-4">
             <div className="flex items-center gap-3">
-              <div className="relative h-12 w-12 overflow-hidden rounded-full bg-gray-200">
-                <Image
-                  src={getCloudinaryUrl(post.author.avatar, {
-                    width: 100,
-                    height: 100,
-                    crop: "thumb",
-                  })}
-                  alt={post.author.name}
-                  fill
-                  sizes="48px"
-                  className="object-cover"
-                />
-              </div>
+              <AuthorAvatar
+                name={post.author.name}
+                avatar={post.author.avatar}
+                size="lg"
+              />
               <div>
                 <p className="text-sm font-bold text-[#1E2328]">
                   {post.author.name}
@@ -309,19 +302,11 @@ async function BlogPostContent({ params }: Props) {
         {/* Author Bio Box */}
         <div className="mt-10 rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm sm:p-8">
           <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-start">
-            <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full bg-gray-200">
-              <Image
-                src={getCloudinaryUrl(post.author.avatar, {
-                  width: 140,
-                  height: 140,
-                  crop: "thumb",
-                })}
-                alt={post.author.name}
-                fill
-                sizes="64px"
-                className="object-cover"
-              />
-            </div>
+            <AuthorAvatar
+              name={post.author.name}
+              avatar={post.author.avatar}
+              size="xl"
+            />
             <div className="text-center sm:text-left">
               <p className="text-xs font-semibold uppercase tracking-wider text-[#0F8F7E]">
                 About the Author

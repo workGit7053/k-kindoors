@@ -301,7 +301,7 @@ STEP 3.4: HOW TO ADD OR EDIT A BLOG ARTICLE
      author: {
        name: "Rajesh Sharma",
        role: "Senior Architectural Consultant",
-       avatar: "https://res.cloudinary.com/demo/image/upload/samples/people/smiling-man.jpg"
+       avatar: "" // Leave empty to auto-display sleek teal monogram initials (e.g. "RS"), or paste your Cloudinary URL
      },
      publishedAt: "2026-10-27",
      readingTime: "5 min read",
