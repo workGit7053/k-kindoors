@@ -10,12 +10,12 @@ export const dummyBlogPosts: BlogPost[] = [
       "Choosing between UPVC and Aluminium window frames? Here is a comprehensive comparison covering durability, energy savings, maintenance, and modern styling to help you make the right choice.",
     category: "Windows",
     coverImage:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1200,h_800,c_fill/cld-sample-2.jpg",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
     author: {
       name: "Rajesh Sharma",
       role: "Senior Architectural Consultant",
       avatar:
-        "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_200,h_200,c_thumb/samples/people/smiling-man.jpg",
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&q=80",
     },
     publishedAt: "2026-10-18",
     readingTime: "6 min read",
@@ -78,12 +78,12 @@ export const dummyBlogPosts: BlogPost[] = [
       "Sliding glass doors create a seamless connection between indoor comfort and outdoor serenity. Discover the engineering, track configurations, and safety features behind top-tier sliding doors.",
     category: "Doors",
     coverImage:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1200,h_800,c_fill/cld-sample.jpg",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
     author: {
       name: "Priya Nair",
       role: "Interior & Spatial Designer",
       avatar:
-        "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_200,h_200,c_thumb/samples/people/kitchen-bar.jpg",
+        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80",
     },
     publishedAt: "2026-10-12",
     readingTime: "5 min read",
@@ -132,12 +132,12 @@ export const dummyBlogPosts: BlogPost[] = [
       "Tired of soaring air-conditioning bills and relentless city noise? Double-glazed insulated windows offer a thermal and acoustic shield for tranquil, eco-conscious living.",
     category: "Energy & Insulation",
     coverImage:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1200,h_800,c_fill/cld-sample-4.jpg",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
     author: {
       name: "Amit Patel",
       role: "Sustainable Building Engineer",
       avatar:
-        "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_200,h_200,c_thumb/samples/people/boy-snow-hoodie.jpg",
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
     },
     publishedAt: "2026-10-05",
     readingTime: "7 min read",
@@ -181,12 +181,12 @@ export const dummyBlogPosts: BlogPost[] = [
       "Your front entrance sets the tone for your entire home. Explore the top door trends of 2026, including oversized pivot doors, dark architectural finishes, and glass sidelights.",
     category: "Design & Trends",
     coverImage:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1200,h_800,c_fill/cld-sample-3.jpg",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
     author: {
       name: "Priya Nair",
       role: "Interior & Spatial Designer",
       avatar:
-        "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_200,h_200,c_thumb/samples/people/kitchen-bar.jpg",
+        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80",
     },
     publishedAt: "2026-09-28",
     readingTime: "4 min read",
@@ -224,12 +224,12 @@ export const dummyBlogPosts: BlogPost[] = [
       "Live near horns, metro lines, or nightlife? Learn how soundproof UPVC and Aluminium acoustic windows can restore peace, focus, and quiet sleep inside your residence.",
     category: "Windows",
     coverImage:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1200,h_800,c_fill/sample.jpg",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
     author: {
       name: "Amit Patel",
       role: "Sustainable Building Engineer",
       avatar:
-        "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_200,h_200,c_thumb/samples/people/boy-snow-hoodie.jpg",
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
     },
     publishedAt: "2026-09-15",
     readingTime: "5 min read",
@@ -266,12 +266,12 @@ export const dummyBlogPosts: BlogPost[] = [
       "A quick seasonal maintenance routine prevents track jamming, water ingress, and hardware degradation in both UPVC and Aluminium doors and windows.",
     category: "Maintenance & Care",
     coverImage:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1200,h_800,c_fill/cld-sample-5.jpg",
+      "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80",
     author: {
       name: "Rajesh Sharma",
       role: "Senior Architectural Consultant",
       avatar:
-        "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_200,h_200,c_thumb/samples/people/smiling-man.jpg",
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&q=80",
     },
     publishedAt: "2026-09-02",
     readingTime: "4 min read",

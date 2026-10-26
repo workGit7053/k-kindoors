@@ -16,7 +16,7 @@ const productCategories = [
     description:
       "Ultra-slim sightlines, high structural rigidity, and thermally broken insulation for modern architectural facades.",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_800,h_500,c_fill/cld-sample-2.jpg",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&h=500&q=80",
     features: ["Slim Sightlines", "Thermal Break", "Multi-Point Lock", "RAL Powder Coating"],
     guideLink: "/blog/upvc-vs-aluminium-windows-comparison",
   },
@@ -25,7 +25,7 @@ const productCategories = [
     description:
       "Multi-chambered profiles delivering industry-leading thermal insulation, weather sealing, and acoustic noise reduction.",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_800,h_500,c_fill/sample.jpg",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&h=500&q=80",
     features: ["Zero Maintenance", "Acoustic Insulation", "Corrosion Resistant", "UV-Stabilized"],
     guideLink: "/blog/soundproof-windows-city-living",
   },
@@ -34,7 +34,7 @@ const productCategories = [
     description:
       "Expansive glass panels with smooth whisper-quiet stainless steel rollers connecting living rooms to balconies.",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_800,h_500,c_fill/cld-sample.jpg",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&h=500&q=80",
     features: ["2 & 3-Track Systems", "Integrated Mesh", "Tempered Safety Glass", "Flush Threshold"],
     guideLink: "/blog/modern-sliding-glass-doors-guide",
   },
@@ -43,7 +43,7 @@ const productCategories = [
     description:
       "Architectural front doors that command attention with oversized dimensions, biometric locks, and striking finishes.",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_800,h_500,c_fill/cld-sample-3.jpg",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&h=500&q=80",
     features: ["Heavy Duty Pivot", "Smart Lock Ready", "Sound Dampening", "Custom Finishes"],
     guideLink: "/blog/top-front-door-styles-curb-appeal",
   },

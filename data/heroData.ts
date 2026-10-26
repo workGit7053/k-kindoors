@@ -4,7 +4,7 @@ export const heroData = {
   description:
     "Discover modern windows and doors designed for beauty, durability, and comfort.",
   image:
-    "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1200,h_800,c_fill/cld-sample-2.jpg",
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
   buttonText: "Explore Products",
   buttonLink: "/products",
 };

@@ -12,7 +12,7 @@ export const productsData: ProductItem[] = [
     category: "windows",
     subCategory: "sliding",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_800,h_550,c_fill/cld-sample-2.jpg",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Engineered with structural aerospace-grade 6063-T6 aluminium alloy, our slimline sliding windows offer whisper-quiet gliding, maximum daylight transmission, and weather-defending compression seals.",
     keyFeatures: [
@@ -40,7 +40,7 @@ export const productsData: ProductItem[] = [
     category: "windows",
     subCategory: "upvc",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_800,h_550,c_fill/sample.jpg",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Custom multi-chambered UPVC casement windows reinforced with galvanized steel cores. Designed to withstand heavy tropical monsoons, direct solar heat, and coastal saline humidity with zero rotting or rusting.",
     keyFeatures: [
@@ -68,7 +68,7 @@ export const productsData: ProductItem[] = [
     category: "windows",
     subCategory: "aluminium",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_800,h_550,c_fill/cld-sample-4.jpg",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "A dual-function engineering marvel: tilt inward at the top for secure draft-free ventilation during rain, or turn the handle to swing wide open for effortless glass cleaning from inside.",
     keyFeatures: [
@@ -96,7 +96,7 @@ export const productsData: ProductItem[] = [
     category: "windows",
     subCategory: "sliding",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_800,h_550,c_fill/cld-sample.jpg",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Our UPVC sliding window systems deliver effortless horizontal gliding without occupying internal room space. Built with specialized dust-defending wool-pile weatherstrips to keep city dust out.",
     keyFeatures: [
@@ -128,7 +128,7 @@ export const productsData: ProductItem[] = [
     category: "doors",
     subCategory: "sliding",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_800,h_550,c_fill/cld-sample.jpg",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Create monumental architectural openings with our heavy-duty sliding patio doors. Capable of handling glass panels up to 3 meters tall with seamless feather-light fingertip gliding on stainless steel tracks.",
     keyFeatures: [
@@ -156,7 +156,7 @@ export const productsData: ProductItem[] = [
     category: "doors",
     subCategory: "pivot",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_800,h_550,c_fill/cld-sample-3.jpg",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Make an extraordinary architectural statement at your main entrance. Instead of traditional side hinges, these doors rotate smoothly on concealed floor-pivot boxes, supporting widths up to 1.8 meters.",
     keyFeatures: [
@@ -184,7 +184,7 @@ export const productsData: ProductItem[] = [
     category: "doors",
     subCategory: "upvc",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_800,h_550,c_fill/cld-sample-5.jpg",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Designed specifically for high-rise apartment balconies and bedroom verandas where wind-driven monsoon rain and city noise are constant challenges. Multi-chamber UPVC profiles block drafts completely.",
     keyFeatures: [
@@ -212,7 +212,7 @@ export const productsData: ProductItem[] = [
     category: "doors",
     subCategory: "glass",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_800,h_550,c_fill/cld-sample-2.jpg",
+      "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Achieve optical clarity and spacious fluidity with our frameless 12mm toughened safety glass doors. Equipped with brushed steel patch fittings, hydraulic floor springs, and frosted privacy bands if desired.",
     keyFeatures: [
@@ -240,7 +240,7 @@ export const productsData: ProductItem[] = [
     category: "doors",
     subCategory: "aluminium",
     image:
-      "https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_800,h_550,c_fill/sample.jpg",
+      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Concertina folding doors that concertina neatly to the edge, opening up almost the entire width of your room. Enjoy unobstructed garden views and an expansive entertainment lounge when entertaining guests.",
     keyFeatures: [
