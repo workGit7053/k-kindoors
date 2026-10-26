@@ -114,7 +114,7 @@ export default function ProductsPage() {
           {productCategories.map((product) => (
             <div
               key={product.title}
-              className="group overflow-hidden rounded-3xl border border-[#E5E7EB] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#0F8F7E]/40 hover:shadow-xl hover:shadow-[#0F8F7E]/10"
+              className="group overflow-hidden rounded-3xl border border-[#E5E7EB] bg-white shadow-sm transition-shadow duration-300 hover:border-[#0F8F7E]/40 hover:shadow-xl hover:shadow-[#0F8F7E]/10"
             >
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-100">
                 <Image
@@ -122,7 +122,7 @@ export default function ProductsPage() {
                   alt={product.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 transform-gpu"
                 />
               </div>
 

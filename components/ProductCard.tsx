@@ -26,7 +26,7 @@ export default function ProductCard({
   )}`;
 
   return (
-    <div className="group flex flex-col overflow-hidden rounded-3xl border border-[#E5E7EB] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#0F8F7E]/40 hover:shadow-xl hover:shadow-[#0F8F7E]/10">
+    <div className="group flex flex-col overflow-hidden rounded-3xl border border-[#E5E7EB] bg-white shadow-sm transition-shadow duration-300 hover:border-[#0F8F7E]/40 hover:shadow-xl hover:shadow-[#0F8F7E]/10">
       {/* Product Image */}
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-gray-100">
         <Image
@@ -35,7 +35,7 @@ export default function ProductCard({
           fill
           priority={priority}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 transform-gpu"
         />
         <div className="absolute left-4 top-4 flex gap-2">
           <span className="rounded-full bg-white/95 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#0F8F7E] shadow-sm backdrop-blur-sm">

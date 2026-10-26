@@ -9,6 +9,8 @@ interface Props {
   params: Promise<{ category: string }>;
 }
 
+export const dynamic = "force-static";
+
 const VALID_CATEGORIES = ["aluminium", "upvc", "sliding"];
 
 const categoryMeta: Record<

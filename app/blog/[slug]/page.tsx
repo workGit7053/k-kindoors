@@ -17,6 +17,8 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+export const dynamic = "force-static";
+
 export async function generateStaticParams() {
   const posts = getAllBlogPosts();
   return posts.map((post) => ({
