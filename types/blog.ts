@@ -4,7 +4,14 @@ export type BlogCategory =
   | "Doors"
   | "Energy & Insulation"
   | "Design & Trends"
-  | "Maintenance & Care";
+  | "Maintenance & Care"
+  // Added for the Window Magic catalogue posts
+  | "About Us"
+  | "Features & Benefits"
+  | "Insect Screens"
+  | "Conservatories"
+  | "Technical Systems"
+  | "Installation Guide";
 
 export interface Author {
   name: string;

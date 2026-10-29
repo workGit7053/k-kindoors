@@ -1,5 +1,5 @@
 ================================================================================
-                    KK INDOORS — COMPLETE DATA & ROUTING GUIDE
+      KK INDOORS — COMPLETE DATA & ROUTING GUIDE
 ================================================================================
 This document provides an exact reference for:
  1. Which dummy data is located in which file.
@@ -179,14 +179,7 @@ URL Path                     File Path                             Type & Notes
 /blog/[slug]                 app/blog/[slug]/page.tsx              Dynamic Route
                              - Reads slug from URL (e.g. /blog/upvc-vs-aluminium-windows-comparison)
                              - Wrapped in React <Suspense> for Instant Navigation
-                             - Includes Schema.org JSON-LD structured data for Google
                              - Pre-renders all 6 articles at build time
-
-/sitemap.xml                 app/sitemap.ts                        Automatic XML Sitemap
-                             - Tells Google and Bing about all product and blog URLs
-
-/robots.txt                  app/robots.ts                         Crawler Instructions
-                             - Defines search engine indexing rules and links to sitemap
 
 
 --------------------------------------------------------------------------------
@@ -301,7 +294,7 @@ STEP 3.4: HOW TO ADD OR EDIT A BLOG ARTICLE
      author: {
        name: "Rajesh Sharma",
        role: "Senior Architectural Consultant",
-       avatar: "" // Leave empty to auto-display sleek teal monogram initials (e.g. "RS"), or paste your Cloudinary URL
+       avatar: "https://res.cloudinary.com/demo/image/upload/samples/people/smiling-man.jpg"
      },
      publishedAt: "2026-10-27",
      readingTime: "5 min read",

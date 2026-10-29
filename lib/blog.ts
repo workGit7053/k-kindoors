@@ -1,8 +1,11 @@
-import { dummyBlogPosts } from "@/data/blogs";
+import { windowMagicBlogPosts } from "@/data/blogs";
 import { BlogPost, BlogCategory } from "@/types/blog";
 
+// Keep the existing dataset intact while removing the broken legacy import.
+const ALL_POSTS: BlogPost[] = [...windowMagicBlogPosts];
+
 export function getAllBlogPosts(): BlogPost[] {
-  return [...dummyBlogPosts].sort(
+  return [...ALL_POSTS].sort(
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   );
 }
@@ -12,7 +15,7 @@ export function getFeaturedBlogPosts(): BlogPost[] {
 }
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
-  return dummyBlogPosts.find((post) => post.slug === slug);
+  return ALL_POSTS.find((post) => post.slug === slug);
 }
 
 export function getBlogPostsByCategory(category: string): BlogPost[] {
@@ -29,9 +32,15 @@ export function getAllCategories(): BlogCategory[] {
     "All",
     "Windows",
     "Doors",
-    "Energy & Insulation",
+    "Technical Systems",
     "Design & Trends",
+    "Insect Screens",
+    "Conservatories",
+    "Features & Benefits",
+    "Installation Guide",
+    "Energy & Insulation",
     "Maintenance & Care",
+    "About Us",
   ];
 }
 
