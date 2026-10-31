@@ -13,32 +13,32 @@ export const metadata: Metadata = {
 const CONTACT_CONFIG = {
   // WhatsApp detail (use international format without spaces or '+' for wa.me URL)
   whatsapp: {
-    display: "+91 93183 35415",
-    link: "https://wa.me/919318335415?text=Hello%20KK%20Indoors%2C%20I%20would%20like%20to%20inquire%20about%20windows%20and%20doors.",
+    display: "+91 8851629191",
+    link: "https://wa.me/8851629191?text=Hello%20KK%20Indoors%2C%20I%20would%20like%20to%20inquire%20about%20windows%20and%20doors.",
     status: "Online • Typically replies in 15 mins",
   },
 
   // Mobile phone number for direct calling
   phone: {
-    display: "+91 93183 35415",
-    link: "tel:+919318335415",
+    display: "+91 8527721904",
+    link: "tel:+91 8527721904",
     hours: "Mon – Sat: 9:00 AM – 7:30 PM",
   },
 
   // Email address for plans and formal inquiries
   email: {
-    display: "contact@kkindoors.com",
-    link: "mailto:contact@kkindoors.com?subject=Inquiry%20from%20KK%20Indoors%20Website",
+    display: "indiandoors2010@gmail.com",
+    link: "mailto:indiandoors2010@gmail.com?subject=Inquiry%20from%20KK%20Indoors%20Website",
     note: "Send blueprints, window schedules & CAD drawings",
   },
 
   // Physical showroom / factory address
   location: {
     name: "KK Indoors Experience Center & Factory",
-    addressLine1: "Plot 42, Fenestration & Design Hub",
-    addressLine2: "Industrial Area Phase II, New Delhi, 110020, India",
+    addressLine1: "C3/31 Swarnpark Mundka new Delhi 11041",
+    addressLine2: "Bahadurgarh",
     directionsUrl:
-      "https://maps.google.com/?q=New+Delhi+Industrial+Area+Phase+II",
+      "https://maps.app.goo.gl/6hWXipXP4rm7c1EM6",
     hours: "Monday – Saturday: 9:30 AM – 6:30 PM (Sunday Closed)",
   },
 
@@ -49,24 +49,26 @@ const CONTACT_CONFIG = {
   // 3. Click "Share" -> "Embed a map"
   // 4. Copy the URL inside the src="..." attribute and paste it here below
   mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112104.7214781442!2d77.16858102377827!3d28.591564757530663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    "https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d223990.59821646992!2d76.7799577!3d28.6940407!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDQ0JzM0LjkiTiA3NsKwNTAnMTEuMiJF!5e0!3m2!1sen!2sin!4v1793430843920!5m2!1sen!2sin",
 };
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-[#F5F7F8] py-14 lg:py-20">
+    <div className="contact-page relative min-h-screen overflow-hidden bg-[#F5F7F8] py-12 sm:py-16 lg:py-20">
+      <div aria-hidden="true" className="pointer-events-none absolute -top-32 right-[-8rem] h-96 w-96 rounded-full bg-[#A7E0D6]/30 blur-3xl" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* ========================================================================= */}
         {/* SECTION 1: PAGE HEADER                                                    */}
         {/* ========================================================================= */}
-        <header className="max-w-3xl">
-          <span className="inline-block rounded-full border border-[#A7E0D6]/60 bg-[#E3F4F1] px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#0F8F7E]">
+        <header className="contact-reveal relative max-w-4xl">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#A7E0D6]/70 bg-white/80 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#0F8F7E] shadow-sm backdrop-blur">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-[#0F8F7E]" />
             Get In Touch
           </span>
-          <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-[#1E2328] sm:text-5xl lg:text-6xl">
-            We&apos;re Here to Help Your Space Evolve
+          <h1 className="mt-5 max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-tight text-[#1E2328] sm:text-5xl lg:text-6xl">
+            Let&apos;s make room for <span className="text-[#0F8F7E]">better living.</span>
           </h1>
-          <p className="mt-5 text-base leading-relaxed text-[#6B7280] sm:text-lg">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-[#6B7280] sm:text-lg">
             Whether you need custom window specifications, sliding patio systems, architectural estimates, or a guided tour of our showroom, our engineering specialists are ready to help.
           </p>
         </header>
@@ -74,14 +76,14 @@ export default function ContactPage() {
         {/* ========================================================================= */}
         {/* SECTION 2: CONTACT DETAILS (WhatsApp, Phone, Email, Location)             */}
         {/* ========================================================================= */}
-        <section aria-labelledby="contact-channels-heading" className="mt-14">
+        <section aria-labelledby="contact-channels-heading" className="contact-reveal contact-reveal-delay-1 relative mt-12 sm:mt-14">
           <h2 id="contact-channels-heading" className="sr-only">
             Direct Contact Channels
           </h2>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {/* --- Channel 1: WhatsApp --- */}
-            <div className="group flex flex-col justify-between rounded-3xl border border-[#E5E7EB] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#0F8F7E]/40 hover:shadow-xl hover:shadow-[#0F8F7E]/10">
+            <div className="contact-card group flex flex-col justify-between rounded-3xl border border-[#E5E7EB] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#0F8F7E]/40 hover:shadow-xl hover:shadow-[#0F8F7E]/10">
               <div>
                 <div className="flex items-center justify-between">
                   {/* WhatsApp Logo */}
@@ -124,7 +126,7 @@ export default function ContactPage() {
             </div>
 
             {/* --- Channel 2: Phone --- */}
-            <div className="group flex flex-col justify-between rounded-3xl border border-[#E5E7EB] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#0F8F7E]/40 hover:shadow-xl hover:shadow-[#0F8F7E]/10">
+            <div className="contact-card group flex flex-col justify-between rounded-3xl border border-[#E5E7EB] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#0F8F7E]/40 hover:shadow-xl hover:shadow-[#0F8F7E]/10">
               <div>
                 <div className="flex items-center justify-between">
                   {/* Phone Logo */}
@@ -170,7 +172,7 @@ export default function ContactPage() {
             </div>
 
             {/* --- Channel 3: Email --- */}
-            <div className="group flex flex-col justify-between rounded-3xl border border-[#E5E7EB] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#0F8F7E]/40 hover:shadow-xl hover:shadow-[#0F8F7E]/10">
+            <div className="contact-card group flex flex-col justify-between rounded-3xl border border-[#E5E7EB] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#0F8F7E]/40 hover:shadow-xl hover:shadow-[#0F8F7E]/10">
               <div>
                 <div className="flex items-center justify-between">
                   {/* Email Logo */}
@@ -216,7 +218,7 @@ export default function ContactPage() {
             </div>
 
             {/* --- Channel 4: Location / Experience Center --- */}
-            <div className="group flex flex-col justify-between rounded-3xl border border-[#E5E7EB] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#0F8F7E]/40 hover:shadow-xl hover:shadow-[#0F8F7E]/10">
+            <div className="contact-card group flex flex-col justify-between rounded-3xl border border-[#E5E7EB] bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#0F8F7E]/40 hover:shadow-xl hover:shadow-[#0F8F7E]/10">
               <div>
                 <div className="flex items-center justify-between">
                   {/* Location Pin Logo */}
@@ -273,15 +275,15 @@ export default function ContactPage() {
         {/* ========================================================================= */}
         {/* SECTION 3: FORM & SHOWROOM BRIEF                                         */}
         {/* ========================================================================= */}
-        <section className="mt-16">
+        <section className="contact-reveal contact-reveal-delay-2 mt-16">
           <ContactForm />
         </section>
 
         {/* ========================================================================= */}
         {/* SECTION 4: INTERACTIVE MAP & SHOWROOM DIRECTIONS                          */}
         {/* ========================================================================= */}
-        <section aria-labelledby="map-location-heading" className="mt-16">
-          <div className="overflow-hidden rounded-3xl border border-[#E5E7EB] bg-white shadow-sm">
+        <section aria-labelledby="map-location-heading" className="contact-reveal contact-reveal-delay-3 mt-16">
+          <div className="overflow-hidden rounded-3xl border border-[#E5E7EB] bg-white shadow-lg shadow-[#1E2328]/5">
             {/* Map Top Bar */}
             <div className="flex flex-col gap-4 border-b border-[#E5E7EB] p-6 sm:flex-row sm:items-center sm:justify-between sm:px-8">
               <div>

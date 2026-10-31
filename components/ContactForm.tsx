@@ -50,8 +50,9 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="rounded-3xl border border-[#E5E7EB] bg-white p-8 shadow-sm sm:p-10">
-      <div className="flex items-center justify-between">
+    <div className="contact-form-panel relative overflow-hidden rounded-3xl border border-[#E5E7EB] bg-white p-6 shadow-xl shadow-[#1E2328]/5 sm:p-10">
+      <div aria-hidden="true" className="absolute right-0 top-0 h-48 w-48 translate-x-1/3 -translate-y-1/3 rounded-full bg-[#E3F4F1] blur-2xl" />
+      <div className="relative flex items-center justify-between">
         <div>
           <span className="text-xs font-bold uppercase tracking-wider text-[#0F8F7E]">
             Online Inquiry
@@ -62,7 +63,7 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <p className="mt-2 text-sm text-[#6B7280]">
+      <p className="relative mt-2 text-sm text-[#6B7280]">
         Fill out your project specifications below. Our architectural engineers will review your requirements and provide estimated pricing within 24 hours.
       </p>
 
@@ -108,7 +109,7 @@ export default function ContactForm() {
         </div>
       ) : (
         /* Main Contact Form */
-        <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+        <form onSubmit={handleSubmit} className="relative mt-8 space-y-6">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {/* Full Name */}
             <div>
