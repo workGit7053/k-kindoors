@@ -5,28 +5,9 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  {
-    name: "Windows",
-    href: "/products/windows",
-    submenu: [
-      { name: "All Windows", href: "/products/windows" },
-      { name: "Aluminium Windows", href: "/products/windows/aluminium" },
-      { name: "UPVC Windows", href: "/products/windows/upvc" },
-      { name: "Sliding Windows", href: "/products/windows/sliding" },
-    ],
-  },
-  {
-    name: "Doors",
-    href: "/products/doors",
-    submenu: [
-      { name: "All Doors", href: "/products/doors" },
-      { name: "Aluminium Doors", href: "/products/doors/aluminium" },
-      { name: "UPVC Doors", href: "/products/doors/upvc" },
-      { name: "Sliding Doors", href: "/products/doors/sliding" },
-      { name: "Glass Doors", href: "/products/doors/glass" },
-    ],
-  },
-  { name: "Blog", href: "/blog" },
+  { name: "Windows", href: "/products/windows" },
+  { name: "Doors", href: "/products/doors" },
+  { name: "Blogs", href: "/blog" },
   { name: "About Us", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
@@ -35,7 +16,6 @@ const WHATSAPP_LINK = "https://wa.me/9318335415";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const [prevPathname, setPrevPathname] = useState(pathname);
 
@@ -43,7 +23,6 @@ export default function Navbar() {
   if (prevPathname !== pathname) {
     setPrevPathname(pathname);
     setIsOpen(false);
-    setOpenDropdown(null);
   }
 
   // Close the mobile menu when switching to desktop width.
@@ -53,7 +32,6 @@ export default function Navbar() {
     const handleResize = () => {
       if (mediaQuery.matches) {
         setIsOpen(false);
-        setOpenDropdown(null);
       }
     };
 
@@ -87,74 +65,6 @@ export default function Navbar() {
               pathname === link.href ||
               (link.href !== "/" && pathname.startsWith(`${link.href}/`));
 
-            if (link.submenu) {
-              const isDropdownOpen = openDropdown === link.name;
-
-              return (
-                <div
-                  key={link.name}
-                  className="relative"
-                  onMouseEnter={() => setOpenDropdown(link.name)}
-                  onMouseLeave={() => setOpenDropdown(null)}
-                >
-                  <button
-                    type="button"
-                    aria-expanded={isDropdownOpen}
-                    onClick={() =>
-                      setOpenDropdown(isDropdownOpen ? null : link.name)
-                    }
-                    onKeyDown={(event) => {
-                      if (event.key === "Escape") {
-                        setOpenDropdown(null);
-                      }
-                    }}
-                    className={`flex items-center gap-1 whitespace-nowrap py-3 text-sm font-medium transition-colors hover:text-[#0F8F7E] ${
-                      isActive ? "font-semibold text-[#0F8F7E]" : "text-[#1E2328]"
-                    }`}
-                  >
-                    {link.name}
-                    <svg
-                      aria-hidden="true"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      className={`h-4 w-4 transition-transform ${
-                        isDropdownOpen ? "rotate-180 text-[#0F8F7E]" : ""
-                      }`}
-                    >
-                      <path
-                        d="m5 7.5 5 5 5-5"
-                        stroke="currentColor"
-                        strokeWidth="1.7"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </button>
-
-                  {isDropdownOpen && (
-                    <div className="absolute left-0 top-full z-50 w-60 pt-1">
-                      <div className="rounded-xl border border-[#E5E7EB] bg-white p-2 shadow-xl shadow-black/5">
-                        {link.submenu.map((item) => (
-                          <Link
-                            key={item.href}
-                            href={item.href}
-                            onClick={() => setOpenDropdown(null)}
-                            className={`block rounded-lg px-3 py-3 text-sm transition-colors hover:bg-[#E3F4F1] hover:text-[#0F8F7E] ${
-                              pathname === item.href
-                                ? "bg-[#E3F4F1] font-semibold text-[#0F8F7E]"
-                                : "text-[#1E2328]"
-                            }`}
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              );
-            }
-
             return (
               <Link
                 key={link.name}
@@ -184,7 +94,6 @@ export default function Navbar() {
           type="button"
           onClick={() => {
             setIsOpen(!isOpen);
-            setOpenDropdown(null);
           }}
           aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={isOpen}
@@ -207,65 +116,6 @@ export default function Navbar() {
               const isActive =
                 pathname === link.href ||
                 (link.href !== "/" && pathname.startsWith(`${link.href}/`));
-
-              if (link.submenu) {
-                const isDropdownOpen = openDropdown === link.name;
-
-                return (
-                  <div key={link.name}>
-                    <button
-                      type="button"
-                      aria-expanded={isDropdownOpen}
-                      onClick={() =>
-                        setOpenDropdown(isDropdownOpen ? null : link.name)
-                      }
-                      className={`flex min-h-12 w-full items-center justify-between rounded-lg px-3 py-3 text-left text-sm font-medium transition-colors hover:bg-[#E3F4F1] ${
-                        isActive ? "bg-[#E3F4F1] font-semibold text-[#0F8F7E]" : "text-[#1E2328]"
-                      }`}
-                    >
-                      {link.name}
-                      <svg
-                        aria-hidden="true"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        className={`h-4 w-4 transition-transform ${
-                          isDropdownOpen ? "rotate-180 text-[#0F8F7E]" : ""
-                        }`}
-                      >
-                        <path
-                          d="m5 7.5 5 5 5-5"
-                          stroke="currentColor"
-                          strokeWidth="1.7"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </button>
-
-                    {isDropdownOpen && (
-                      <div className="ml-3 border-l-2 border-[#E3F4F1] py-1 pl-3">
-                        {link.submenu.map((item) => (
-                          <Link
-                            key={item.href}
-                            href={item.href}
-                            onClick={() => {
-                              setIsOpen(false);
-                              setOpenDropdown(null);
-                            }}
-                            className={`flex min-h-11 items-center rounded-lg px-3 py-2 text-sm transition-colors hover:bg-[#E3F4F1] hover:text-[#0F8F7E] ${
-                              pathname === item.href
-                                ? "bg-[#E3F4F1] font-semibold text-[#0F8F7E]"
-                                : "text-[#4B5563]"
-                            }`}
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                );
-              }
 
               return (
                 <Link

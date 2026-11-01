@@ -1,23 +1,16 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getWindowsProducts } from "@/data/products";
-import ProductCard from "@/components/ProductCard";
+import WindowsCatalog from "@/components/WindowsCatalog";
 
 export const metadata: Metadata = {
   title: "Premium Windows | UPVC & Aluminium Systems | KK Indoors",
   description:
-    "Explore our high-performance architectural windows. Featuring slimline aluminium sliding systems, multi-chamber UPVC casements, and acoustic double glazing.",
+    "Explore our high-performance architectural windows. Featuring slimline aluminium sliding systems, multi-chamber UPVC casements, top hung, French, and fix windows.",
 };
 
 const WHATSAPP_LINK =
   "https://wa.me/9318335415?text=Hello%20KK%20Indoors,%20I%20am%20interested%20in%20windows%20for%20my%20project.%20Please%20share%20quotation%20and%20catalogs.";
-
-const filterTabs = [
-  { name: "All Windows", href: "/products/windows", active: true },
-  { name: "Aluminium Windows", href: "/products/windows/aluminium", active: false },
-  { name: "UPVC Windows", href: "/products/windows/upvc", active: false },
-  { name: "Sliding Windows", href: "/products/windows/sliding", active: false },
-];
 
 export default function WindowsPage() {
   const windows = getWindowsProducts("all");
@@ -36,45 +29,19 @@ export default function WindowsPage() {
             Architectural Windows Collection
           </h1>
           <p className="mt-5 text-base leading-relaxed text-[#6B7280] sm:text-lg">
-            Engineered for high wind-load resistance, acoustic serenity, and exceptional thermal insulation. From ultra-slim aluminium panoramic frames to weather-defending UPVC profiles.
+            Engineered for high wind-load resistance, acoustic serenity, and exceptional thermal insulation. Filter by your choice of opening mechanism or premium frame material below.
           </p>
         </header>
 
         {/* ========================================================================= */}
-        {/* SECTION 2: CATEGORY FILTER TABS                                           */}
+        {/* SECTION 2: INTERACTIVE FILTER & PRODUCT CATALOG                           */}
         {/* ========================================================================= */}
-        <nav aria-label="Window sub-categories" className="mt-10 flex flex-wrap gap-2 border-b border-[#E5E7EB] pb-5">
-          {filterTabs.map((tab) => (
-            <Link
-              key={tab.name}
-              href={tab.href}
-              className={`rounded-full px-5 py-2.5 text-xs font-semibold transition-all ${
-                tab.active
-                  ? "bg-gradient-to-r from-[#0F8F7E] to-[#0D7A6B] text-white shadow-md shadow-[#0F8F7E]/20"
-                  : "border border-[#E5E7EB] bg-white text-[#6B7280] hover:border-[#0F8F7E]/40 hover:bg-[#E3F4F1]/50 hover:text-[#0F8F7E]"
-              }`}
-            >
-              {tab.name}
-            </Link>
-          ))}
-        </nav>
+        <div className="mt-10">
+          <WindowsCatalog products={windows} />
+        </div>
 
         {/* ========================================================================= */}
-        {/* SECTION 3: PRODUCT GRID                                                   */}
-        {/* ========================================================================= */}
-        <section aria-labelledby="windows-catalog-heading" className="mt-12">
-          <h2 id="windows-catalog-heading" className="sr-only">
-            Windows Catalog
-          </h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {windows.map((product, idx) => (
-              <ProductCard key={product.id} product={product} priority={idx < 2} />
-            ))}
-          </div>
-        </section>
-
-        {/* ========================================================================= */}
-        {/* SECTION 4: COMPARISON GUIDE TABLE (UPVC vs Aluminium)                     */}
+        {/* SECTION 3: COMPARISON GUIDE TABLE (UPVC vs Aluminium)                     */}
         {/* ========================================================================= */}
         <section className="mt-20 rounded-3xl border border-[#E5E7EB] bg-white p-8 shadow-sm sm:p-12">
           <span className="text-xs font-bold uppercase tracking-wider text-[#0F8F7E]">

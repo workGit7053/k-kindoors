@@ -123,11 +123,11 @@ This document provides an exact reference for:
 
 [E] NAVIGATION MENUS & HEADER / FOOTER
     * Header File: components/Navbar.tsx
-      - Contains `navLinks` array defining the top menu and dropdowns:
+      - Contains `navLinks` array defining the top menu:
         * Home ("/")
-        * Windows ("/products/windows") -> Submenu with Aluminium, UPVC, Sliding
-        * Doors ("/products/doors") -> Submenu with Aluminium, UPVC, Sliding, Glass
-        * Blog ("/blog")
+        * Windows ("/products/windows") -> Windows Hub with simple Type filter & sort
+        * Doors ("/products/doors") -> Doors Hub with simple Type filter & sort
+        * Blogs ("/blog")
         * About Us ("/about")
         * Contact ("/contact")
         * Top quote button WhatsApp URL

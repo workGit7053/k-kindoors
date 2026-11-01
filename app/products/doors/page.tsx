@@ -1,24 +1,16 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getDoorsProducts } from "@/data/products";
-import ProductCard from "@/components/ProductCard";
+import DoorsCatalog from "@/components/DoorsCatalog";
 
 export const metadata: Metadata = {
-  title: "Architectural Doors | Sliding, Pivot & Folding Systems | KK Indoors",
+  title: "Architectural Doors | UPVC & Aluminium Systems | KK Indoors",
   description:
-    "Discover heavy-duty aluminium sliding patio doors, monumental pivot entrances, UPVC balcony sliders, and frameless toughened glass partitions.",
+    "Discover UPVC casement doors, smooth sliding patio doors, panoramic slide and fold systems, and monumental architectural entrances.",
 };
 
 const WHATSAPP_LINK =
   "https://wa.me/9318335415?text=Hello%20KK%20Indoors,%20I%20am%20interested%20in%20doors%20for%20my%20project.%20Please%20share%20quotation%20and%20catalogs.";
-
-const filterTabs = [
-  { name: "All Doors", href: "/products/doors", active: true },
-  { name: "Aluminium Doors", href: "/products/doors/aluminium", active: false },
-  { name: "UPVC Doors", href: "/products/doors/upvc", active: false },
-  { name: "Sliding Doors", href: "/products/doors/sliding", active: false },
-  { name: "Glass Doors", href: "/products/doors/glass", active: false },
-];
 
 export default function DoorsPage() {
   const doors = getDoorsProducts("all");
@@ -37,45 +29,19 @@ export default function DoorsPage() {
             Architectural Doors Collection
           </h1>
           <p className="mt-5 text-base leading-relaxed text-[#6B7280] sm:text-lg">
-            Blurring the boundaries between inside and outside. Explore monumental pivot entry doors, heavy-duty panoramic patio sliders, concertina bi-folds, and minimalist frameless glass partitions.
+            Blurring the boundaries between inside and outside. Filter by your choice of door opening style—casement, sliding, or slide and fold doors.
           </p>
         </header>
 
         {/* ========================================================================= */}
-        {/* SECTION 2: CATEGORY FILTER TABS                                           */}
+        {/* SECTION 2: INTERACTIVE FILTER & PRODUCT CATALOG                           */}
         {/* ========================================================================= */}
-        <nav aria-label="Door sub-categories" className="mt-10 flex flex-wrap gap-2 border-b border-[#E5E7EB] pb-5">
-          {filterTabs.map((tab) => (
-            <Link
-              key={tab.name}
-              href={tab.href}
-              className={`rounded-full px-5 py-2.5 text-xs font-semibold transition-all ${
-                tab.active
-                  ? "bg-gradient-to-r from-[#0F8F7E] to-[#0D7A6B] text-white shadow-md shadow-[#0F8F7E]/20"
-                  : "border border-[#E5E7EB] bg-white text-[#6B7280] hover:border-[#0F8F7E]/40 hover:bg-[#E3F4F1]/50 hover:text-[#0F8F7E]"
-              }`}
-            >
-              {tab.name}
-            </Link>
-          ))}
-        </nav>
+        <div className="mt-10">
+          <DoorsCatalog products={doors} />
+        </div>
 
         {/* ========================================================================= */}
-        {/* SECTION 3: PRODUCT GRID                                                   */}
-        {/* ========================================================================= */}
-        <section aria-labelledby="doors-catalog-heading" className="mt-12">
-          <h2 id="doors-catalog-heading" className="sr-only">
-            Doors Catalog
-          </h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {doors.map((product, idx) => (
-              <ProductCard key={product.id} product={product} priority={idx < 3} />
-            ))}
-          </div>
-        </section>
-
-        {/* ========================================================================= */}
-        {/* SECTION 4: ARCHITECTURAL DOOR SYSTEMS EXPLAINED                           */}
+        {/* SECTION 3: ARCHITECTURAL DOOR SYSTEMS EXPLAINED                           */}
         {/* ========================================================================= */}
         <section className="mt-20 rounded-3xl border border-[#E5E7EB] bg-white p-8 shadow-sm sm:p-12">
           <span className="text-xs font-bold uppercase tracking-wider text-[#0F8F7E]">

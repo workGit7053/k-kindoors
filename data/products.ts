@@ -11,6 +11,8 @@ export const productsData: ProductItem[] = [
     tagline: "Panoramic views with ultra-narrow 28mm architectural sightlines",
     category: "windows",
     subCategory: "sliding",
+    material: "aluminium",
+    windowType: "sliding",
     image:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&h=550&q=80",
     description:
@@ -39,6 +41,8 @@ export const productsData: ProductItem[] = [
     tagline: "Unbeatable energy conservation and total weatherproofing",
     category: "windows",
     subCategory: "upvc",
+    material: "upvc",
+    windowType: "casement",
     image:
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&h=550&q=80",
     description:
@@ -67,6 +71,8 @@ export const productsData: ProductItem[] = [
     tagline: "Dual-action versatility: top ventilation or full inward swing",
     category: "windows",
     subCategory: "aluminium",
+    material: "aluminium",
+    windowType: "tilt-turn",
     image:
       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&h=550&q=80",
     description:
@@ -95,6 +101,8 @@ export const productsData: ProductItem[] = [
     tagline: "Effortless space optimization with low-friction polymer tracks",
     category: "windows",
     subCategory: "sliding",
+    material: "upvc",
+    windowType: "sliding",
     image:
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&h=550&q=80",
     description:
@@ -116,6 +124,126 @@ export const productsData: ProductItem[] = [
     bestFor: "Kitchen counters, balconies, utility rooms, and compact apartments",
     guideSlug: "maintenance-guide-doors-windows",
   },
+  {
+    id: "win-5",
+    slug: "upvc-top-hung-windows",
+    title: "UPVC Top Hung Awning Windows",
+    tagline: "Outward-pushing top ventilation with integrated rain deflector",
+    category: "windows",
+    subCategory: "upvc",
+    material: "upvc",
+    windowType: "top-hung",
+    image:
+      "https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?auto=format&fit=crop&w=800&h=550&q=80",
+    description:
+      "Engineered with top hinges and precision multi-point friction stays that allow the bottom sash to push outward safely. Designed for rainproof, draft-free ventilation even during heavy monsoon downpours.",
+    keyFeatures: [
+      "Top-hinged friction stays maintain smooth opening at any angle",
+      "Twin continuous EPDM perimeter seals prevent water ingress",
+      "Concealed multi-point perimeter locks for burglary resistance",
+      "Ideal for bathrooms, staircases, and high-rise apartment bedrooms",
+    ],
+    specs: {
+      profileDepth: "60mm multi-chamber profile",
+      glassOptions: "6mm frosted privacy / 24mm frosted DGU",
+      soundInsulation: "Up to 36 dB sound reduction",
+      thermalPerformance: "U-value ≤ 1.4 W/m²K",
+      hardware: "Heavy-duty Grade 304 stainless steel friction stays",
+      warranty: "15-year profile warranty",
+    },
+    bestFor: "Bathrooms, kitchens, high-rise utility corridors, and stairwells",
+    guideSlug: "soundproof-windows-city-living",
+  },
+  {
+    id: "win-6",
+    slug: "upvc-french-windows",
+    title: "UPVC French Windows",
+    tagline: "Double outward opening sashes without central mullion for panoramic vistas",
+    category: "windows",
+    subCategory: "upvc",
+    material: "upvc",
+    windowType: "french",
+    image:
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&h=550&q=80",
+    description:
+      "Classic French double-sash casement windows featuring flying mullion construction. When both sashes are pushed wide open, enjoy an entirely unobstructed panoramic opening without a central vertical post.",
+    keyFeatures: [
+      "Flying mullion design leaves 100% clear aperture when opened",
+      "Independent multi-point shootbolt locking on secondary master leaf",
+      "Internal galvanized steel reinforcement cores resist heavy wind loads",
+      "Available with Georgian decorative bars and integrated insect screen",
+    ],
+    specs: {
+      profileDepth: "60mm - 70mm multi-chamber profile",
+      glassOptions: "8mm toughened or 24mm acoustic laminated DGU",
+      soundInsulation: "Up to 39 dB sound dampening",
+      thermalPerformance: "U-value ≤ 1.3 W/m²K",
+      hardware: "Dual espagnolette multi-point shootbolts",
+      warranty: "20-year profile colorfast warranty",
+    },
+    bestFor: "Balconies, master bedrooms, heritage villas, and garden verandas",
+    guideSlug: "upvc-vs-aluminium-windows-comparison",
+  },
+  {
+    id: "win-7",
+    slug: "upvc-fix-windows",
+    title: "UPVC Fix Windows (Picture Windows)",
+    tagline: "Maximum daylight and total acoustic hermetic sealing",
+    category: "windows",
+    subCategory: "upvc",
+    material: "upvc",
+    windowType: "fixed",
+    image:
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&h=550&q=80",
+    description:
+      "Non-opening architectural fixed picture windows designed to flood indoor spaces with daylight while offering the absolute highest level of acoustic and thermal insulation available in fenestration.",
+    keyFeatures: [
+      "100% hermetically sealed stationary frame eliminates air and dust leakage",
+      "Supports massive single-span laminated or insulated glass panes",
+      "Thick multi-chamber walls block street traffic acoustics",
+      "Zero mechanical moving parts for lifetime maintenance-free longevity",
+    ],
+    specs: {
+      profileDepth: "60mm - 80mm profile depth",
+      glassOptions: "Up to 32mm acoustic laminated triple glazing",
+      soundInsulation: "Up to 44 dB acoustic isolation",
+      thermalPerformance: "U-value ≤ 1.1 W/m²K",
+      hardware: "Galvanized steel structural reinforcement core",
+      warranty: "20-year structural & colorfast warranty",
+    },
+    bestFor: "Living rooms, high-rise facades, staircases, and roadside bedrooms",
+    guideSlug: "double-glazed-windows-energy-efficiency",
+  },
+  {
+    id: "win-8",
+    slug: "upvc-sliding-with-fix-windows",
+    title: "UPVC Sliding with Fix Windows",
+    tagline: "Seamless hybrid pairing stationary panoramic glass with smooth sliding sash",
+    category: "windows",
+    subCategory: "sliding",
+    material: "upvc",
+    windowType: "sliding-fixed",
+    image:
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&h=550&q=80",
+    description:
+      "A versatile combination window unit integrating a large stationary fixed picture window with one or two whisper-quiet horizontal sliding sashes. Combines uncompromised scenic views with controlled fresh airflow.",
+    keyFeatures: [
+      "Integrated fixed + sliding sash in a unified monolithic outer frame",
+      "Tandem stainless steel rollers glide effortlessly on polymer tracks",
+      "Dedicated track for stainless steel mosquito mesh screen",
+      "Multi-point anti-lift locking mechanism on sliding sash",
+    ],
+    specs: {
+      profileDepth: "88mm - 112mm multi-track combination frame",
+      glassOptions: "6mm toughened / 20mm insulated DGU",
+      soundInsulation: "Up to 35 dB sound reduction",
+      thermalPerformance: "Multi-chamber weather seal barrier",
+      hardware: "Touch lock / pop-up ergonomic handles",
+      warranty: "15-year warranty",
+    },
+    bestFor: "Living room verandas, study rooms, dining areas, and balconies",
+    guideSlug: "maintenance-guide-doors-windows",
+  },
 
   // =========================================================================
   // DOORS COLLECTION
@@ -127,6 +255,8 @@ export const productsData: ProductItem[] = [
     tagline: "Expansive multi-panel sliders connecting interiors to nature",
     category: "doors",
     subCategory: "sliding",
+    material: "aluminium",
+    doorType: "sliding",
     image:
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&h=550&q=80",
     description:
@@ -155,6 +285,8 @@ export const productsData: ProductItem[] = [
     tagline: "A majestic first impression with bold minimalist proportions",
     category: "doors",
     subCategory: "pivot",
+    material: "aluminium",
+    doorType: "pivot",
     image:
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&h=550&q=80",
     description:
@@ -179,10 +311,12 @@ export const productsData: ProductItem[] = [
   {
     id: "door-3",
     slug: "upvc-multi-chamber-balcony-sliding-doors",
-    title: "UPVC Multi-Chamber Balcony Sliding Doors",
+    title: "UPVC Sliding Doors",
     tagline: "Acoustic peace, monsoon sealing, and integrated insect screen",
     category: "doors",
     subCategory: "upvc",
+    material: "upvc",
+    doorType: "sliding",
     image:
       "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&h=550&q=80",
     description:
@@ -211,6 +345,8 @@ export const productsData: ProductItem[] = [
     tagline: "Clean transparency for contemporary interiors and offices",
     category: "doors",
     subCategory: "glass",
+    material: "glass",
+    doorType: "glass",
     image:
       "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&h=550&q=80",
     description:
@@ -239,6 +375,8 @@ export const productsData: ProductItem[] = [
     tagline: "Open up to 90% of your wall for seamless indoor-outdoor living",
     category: "doors",
     subCategory: "aluminium",
+    material: "aluminium",
+    doorType: "slide-and-fold",
     image:
       "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&h=550&q=80",
     description:
@@ -260,6 +398,66 @@ export const productsData: ProductItem[] = [
     bestFor: "Garden decks, terrace bar areas, pool houses, restaurant facades",
     guideSlug: "upvc-vs-aluminium-windows-comparison",
   },
+  {
+    id: "door-6",
+    slug: "upvc-casement-doors",
+    title: "UPVC Casement Doors",
+    tagline: "Airtight double compression seals with multi-point perimeter security",
+    category: "doors",
+    subCategory: "upvc",
+    material: "upvc",
+    doorType: "casement",
+    image:
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&h=550&q=80",
+    description:
+      "Heavy-duty UPVC hinged casement doors built with thick multi-chambered profiles and internal galvanized steel stiffeners. Engineered with continuous dual EPDM rubber gaskets for complete weatherproofing, noise reduction, and thermal insulation.",
+    keyFeatures: [
+      "Twin EPDM rubber compression gaskets guarantee zero air or water leakage",
+      "Multi-point European shootbolt locks engage at 4 frame points",
+      "Heavy-duty 3D adjustable security hinges tested to 100,000 cycles",
+      "Available with Low-E double glazing or acoustic laminated security glass",
+    ],
+    specs: {
+      profileDepth: "60mm - 70mm multi-chamber profile",
+      glassOptions: "8mm toughened to 28mm acoustic laminated DGU",
+      soundInsulation: "Up to 38 dB noise reduction",
+      thermalPerformance: "U-value ≤ 1.3 W/m²K",
+      hardware: "Espagnolette multi-point shootbolts & lever handle",
+      warranty: "20-year profile colorfast warranty",
+    },
+    bestFor: "Balconies, terraces, patio walkouts, villa backyards, and entrance foyers",
+    guideSlug: "upvc-vs-aluminium-windows-comparison",
+  },
+  {
+    id: "door-7",
+    slug: "upvc-slide-and-fold-doors",
+    title: "UPVC Slide and Fold Doors",
+    tagline: "Panoramic concertina panels opening 90% of your aperture seamlessly",
+    category: "doors",
+    subCategory: "upvc",
+    material: "upvc",
+    doorType: "slide-and-fold",
+    image:
+      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&h=550&q=80",
+    description:
+      "Monumental UPVC slide and fold panoramic doors. The individual door sashes concertina effortlessly along high-grade stainless steel tracks and fold flat against the wall, merging indoor spaces with balconies and gardens.",
+    keyFeatures: [
+      "Panels fold and stack flat to either side for 90% wide-open view",
+      "Precision stainless steel Grade 304 tandem bogie rollers for smooth slide",
+      "Multi-chamber thermal UPVC frames insulate against summer heat and monsoon rain",
+      "Flush floor threshold option for seamless barrier-free transit",
+    ],
+    specs: {
+      profileDepth: "70mm multi-chamber track profile",
+      glassOptions: "10mm toughened to 28mm acoustic DGU",
+      soundInsulation: "Up to 37 dB noise reduction",
+      thermalPerformance: "U-value ≤ 1.4 W/m²K",
+      hardware: "Heavy-duty concealed stainless steel concertina hardware",
+      warranty: "15-year comprehensive warranty",
+    },
+    bestFor: "Living room verandas, garden decks, pool areas, and luxury penthouses",
+    guideSlug: "modern-sliding-glass-doors-guide",
+  },
 ];
 
 // Query helper functions
@@ -272,10 +470,13 @@ export function getWindowsProducts(subCategory?: string): ProductItem[] {
   if (!subCategory || subCategory === "all") {
     return windows;
   }
+  const query = subCategory.toLowerCase();
   return windows.filter(
     (p) =>
-      p.subCategory.toLowerCase() === subCategory.toLowerCase() ||
-      p.title.toLowerCase().includes(subCategory.toLowerCase())
+      p.subCategory.toLowerCase() === query ||
+      p.material?.toLowerCase() === query ||
+      p.windowType?.toLowerCase() === query ||
+      p.title.toLowerCase().includes(query)
   );
 }
 
@@ -284,10 +485,13 @@ export function getDoorsProducts(subCategory?: string): ProductItem[] {
   if (!subCategory || subCategory === "all") {
     return doors;
   }
+  const query = subCategory.toLowerCase();
   return doors.filter(
     (p) =>
-      p.subCategory.toLowerCase() === subCategory.toLowerCase() ||
-      p.title.toLowerCase().includes(subCategory.toLowerCase())
+      p.subCategory.toLowerCase() === query ||
+      p.doorType?.toLowerCase() === query ||
+      p.material?.toLowerCase() === query ||
+      p.title.toLowerCase().includes(query)
   );
 }
 

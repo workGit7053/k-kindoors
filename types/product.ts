@@ -26,6 +26,9 @@ export interface ProductItem {
   tagline: string;
   category: ProductCategory;
   subCategory: ProductSubCategory;
+  material?: "upvc" | "aluminium" | "glass" | string;
+  windowType?: string;
+  doorType?: string;
   image: string;
   description: string;
   keyFeatures: string[];
