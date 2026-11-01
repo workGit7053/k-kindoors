@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -50,13 +51,15 @@ export default function Navbar() {
         className="mx-auto flex min-h-16 w-full max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:gap-5 lg:px-8"
       >
         {/* Logo */}
-        <Link
-          href="/"
-          onClick={() => setIsOpen(false)}
-          className="shrink-0 text-xl font-bold tracking-tight text-[#0F8F7E] sm:text-2xl"
-        >
-          KK <span className="text-[#1E2328]">Indoors</span>
-        </Link>
+
+        <Image
+          src="/LogoKK.png"
+          alt="KK Windows & Doors logo"
+          width={160}
+          height={48}
+          priority
+          className="h-9 w-auto sm:h-10 lg:h-12"
+        />
 
         {/* Desktop Navigation: 1024px and above */}
         <div className="hidden items-center gap-4 xl:gap-6 lg:flex">
@@ -69,9 +72,8 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`whitespace-nowrap py-3 text-sm font-medium transition-colors hover:text-[#0F8F7E] ${
-                  isActive ? "font-semibold text-[#0F8F7E]" : "text-[#1E2328]"
-                }`}
+                className={`whitespace-nowrap py-3 text-sm font-medium transition-colors hover:text-[#0F8F7E] ${isActive ? "font-semibold text-[#0F8F7E]" : "text-[#1E2328]"
+                  }`}
               >
                 {link.name}
               </Link>
@@ -122,9 +124,8 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`flex min-h-12 items-center rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-[#E3F4F1] hover:text-[#0F8F7E] ${
-                    isActive ? "bg-[#E3F4F1] font-semibold text-[#0F8F7E]" : "text-[#1E2328]"
-                  }`}
+                  className={`flex min-h-12 items-center rounded-lg px-3 py-3 text-sm font-medium transition-colors hover:bg-[#E3F4F1] hover:text-[#0F8F7E] ${isActive ? "bg-[#E3F4F1] font-semibold text-[#0F8F7E]" : "text-[#1E2328]"
+                    }`}
                 >
                   {link.name}
                 </Link>

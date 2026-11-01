@@ -30,18 +30,8 @@ This document provides an exact reference for:
     * File Path: data/products.ts
     * TypeScript Model: types/product.ts
     * What it contains:
-      - Array `productsData` containing 9 detailed products:
-        4 Windows:
-          1. Slimline Aluminium Sliding Windows (slug: "slimline-aluminium-sliding-windows")
-          2. UPVC Multi-Chamber Casement Windows (slug: "upvc-thermal-casement-windows")
-          3. Architectural Aluminium Tilt & Turn Windows (slug: "architectural-aluminium-tilt-turn-windows")
-          4. UPVC Smooth-Glide Sliding Windows (slug: "upvc-smooth-glide-sliding-windows")
-        5 Doors:
-          1. Heavy-Duty Aluminium Sliding Patio Doors (slug: "heavy-duty-aluminium-sliding-patio-doors")
-          2. Oversized Architectural Pivot Entrance Doors (slug: "oversized-architectural-pivot-entrance-doors")
-          3. UPVC Multi-Chamber Balcony Sliding Doors (slug: "upvc-multi-chamber-balcony-sliding-doors")
-          4. Frameless Toughened Glass Doors & Partitions (slug: "frameless-toughened-glass-doors")
-          5. Aluminium Bi-Fold Panoramic Folding Doors (slug: "aluminium-bifold-folding-patio-doors")
+      - Array `productsData` containing 23 detailed products:
+        12 window products and 11 door products, including image URLs for every product.
       - For each product:
         * id: Unique ID (e.g., "win-1", "door-1")
         * slug: URL identifier
@@ -49,7 +39,7 @@ This document provides an exact reference for:
         * tagline: One-line architectural selling point
         * category: "windows" or "doors"
         * subCategory: "aluminium", "upvc", "sliding", "glass", "pivot", etc.
-        * image: Cloudinary URL
+        * image: Product image URL (currently Unsplash)
         * description: Full marketing & technical explanation
         * keyFeatures: Bullet point array of engineering specs
         * specs: Object with profileDepth, glassOptions, soundInsulation,
