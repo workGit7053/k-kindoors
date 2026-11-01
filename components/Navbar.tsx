@@ -13,7 +13,7 @@ const navLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
-const WHATSAPP_LINK = "https://wa.me/9318335415";
+const WHATSAPP_LINK = "https://wa.me/8851629191";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
