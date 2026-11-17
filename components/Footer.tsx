@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CALL_PHONE_DISPLAY, getCallUrl, getWhatsAppUrl } from "@/lib/contact";
 
-const WHATSAPP_LINK = "https://wa.me/918851629191";
-const PHONE_DISPLAY = "+91 85277 21904";
-const PHONE_HREF = "tel:+918527721904";
+const WHATSAPP_LINK = getWhatsAppUrl();
 
 const footerGroups = [
   {
@@ -21,7 +20,7 @@ const footerGroups = [
       { label: "All windows", href: "/products/windows" },
       { label: "UPVC windows", href: "/products/windows" },
       { label: "Aluminium windows", href: "/products/windows" },
-      { label: "Window guides", href: "/blog/upvc-vs-aluminium-windows-comparison" },
+      { label: "Window guides", href: "/blog/range-of-upvc-windows-casement-sliding-tilt-turn" },
     ],
   },
   {
@@ -30,7 +29,7 @@ const footerGroups = [
       { label: "All doors", href: "/products/doors" },
       { label: "UPVC doors", href: "/products/doors" },
       { label: "Aluminium doors", href: "/products/doors" },
-      { label: "Door inspiration", href: "/blog/top-front-door-styles-curb-appeal" },
+      { label: "Door inspiration", href: "/blog/range-of-upvc-doors-casement-sliding-lift-slide-fold" },
     ],
   },
 ];
@@ -116,11 +115,11 @@ export default function Footer() {
               className={`inline-flex rounded-sm ${focusRing}`}
             >
               <Image
-                src="/LogoKK.png"
+                src="/assets/Logo.jpg"
                 alt="KK Indoors"
                 width={160}
                 height={48}
-                className="h-10 w-auto brightness-0 invert"
+                className="h-10 w-auto rounded object-contain"
               />
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-7">
@@ -128,11 +127,11 @@ export default function Footer() {
               comfortable, light-filled spaces.
             </p>
             <a
-              href={PHONE_HREF}
+              href={getCallUrl()}
               className={`mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-white transition-colors hover:text-[#2BC4AE] ${focusRing}`}
             >
               <PhoneIcon />
-              {PHONE_DISPLAY}
+              {CALL_PHONE_DISPLAY}
             </a>
           </div>
 

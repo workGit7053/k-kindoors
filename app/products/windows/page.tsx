@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getWindowsProducts } from "@/data/products";
 import WindowsCatalog from "@/components/WindowsCatalog";
+import { getWhatsAppUrl } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "Premium Windows | UPVC & Aluminium Systems | KK Indoors",
@@ -9,8 +10,9 @@ export const metadata: Metadata = {
     "Explore our high-performance architectural windows. Featuring slimline aluminium sliding systems, multi-chamber UPVC casements, top hung, French, and fix windows.",
 };
 
-const WHATSAPP_LINK =
-  "https://wa.me/9318335415?text=Hello%20KK%20Indoors,%20I%20am%20interested%20in%20windows%20for%20my%20project.%20Please%20share%20quotation%20and%20catalogs.";
+const WHATSAPP_LINK = getWhatsAppUrl(
+  "Hello KK Indoors, I am interested in windows for my project. Please share quotation and catalogs."
+);
 
 export default function WindowsPage() {
   const windows = getWindowsProducts("all");
@@ -98,7 +100,7 @@ export default function WindowsPage() {
               Want a comprehensive guide? Read our detailed homeowner comparison.
             </p>
             <Link
-              href="/blog/upvc-vs-aluminium-windows-comparison"
+              href="/blog/range-of-upvc-windows-casement-sliding-tilt-turn"
               className="text-xs font-bold text-[#0F8F7E] hover:underline"
             >
               Read Full UPVC vs Aluminium Guide →

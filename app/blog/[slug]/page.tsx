@@ -12,6 +12,7 @@ import { getCloudinaryUrl } from "@/lib/cloudinary";
 import BlogCard from "@/components/BlogCard";
 import ShareButtons from "@/components/ShareButtons";
 import AuthorAvatar from "@/components/AuthorAvatar";
+import { getWhatsAppUrl } from "@/lib/contact";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -105,9 +106,9 @@ async function BlogPostContent({ params }: Props) {
     quality: "auto",
   });
 
-  const whatsappInquiryUrl = `https://wa.me/9318335415?text=${encodeURIComponent(
+  const whatsappInquiryUrl = getWhatsAppUrl(
     `Hi KK Indoors, I read your article "${post.title}" and would like to inquire about similar windows or doors for my project.`
-  )}`;
+  );
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://kkindoors.com";
   const postUrl = `${siteUrl}/blog/${post.slug}`;

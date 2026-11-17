@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { getWhatsAppUrl } from "@/lib/contact";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -13,7 +14,7 @@ const navLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
-const WHATSAPP_LINK = "https://wa.me/8851629191";
+const WHATSAPP_LINK = getWhatsAppUrl();
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,14 +53,16 @@ export default function Navbar() {
       >
         {/* Logo */}
 
-        <Image
-          src="/LogoKK.png"
-          alt="KK Windows & Doors logo"
-          width={160}
-          height={48}
-          priority
-          className="h-9 w-auto sm:h-10 lg:h-12"
-        />
+        <Link href="/" aria-label="KK Indoors home" className="shrink-0">
+          <Image
+            src="/assets/Logo.jpg"
+            alt="KK Windows & Doors logo"
+            width={160}
+            height={48}
+            priority
+            className="h-9 w-auto sm:h-10 lg:h-12"
+          />
+        </Link>
 
         {/* Desktop Navigation: 1024px and above */}
         <div className="hidden items-center gap-4 xl:gap-6 lg:flex">

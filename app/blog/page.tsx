@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAllBlogPosts, getAllCategories, getFeaturedBlogPosts } from "@/lib/blog";
 import FeaturedBlogHero from "@/components/FeaturedBlogHero";
 import BlogList from "@/components/BlogList";
+import { getWhatsAppUrl } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "Windows & Doors Knowledge Hub & Blog | KK Indoors",
@@ -10,8 +11,9 @@ export const metadata: Metadata = {
     "Expert guides, architectural insights, and buying advice on UPVC windows, aluminium sliding doors, acoustic glass, and modern home trends.",
 };
 
-const WHATSAPP_LINK =
-  "https://wa.me/YOUR_PHONE_NUMBER?text=Hi%20KK%20Indoors,%20I%20read%20your%20blog%20and%20would%20like%20a%20consultation%20on%20windows/doors.";
+const WHATSAPP_LINK = getWhatsAppUrl(
+  "Hi KK Indoors, I read your blog and would like a consultation on windows or doors."
+);
 
 export default function BlogIndexPage() {
   const posts = getAllBlogPosts();

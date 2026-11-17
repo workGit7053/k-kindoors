@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { getWhatsAppUrl } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "Products | Premium Windows & Doors | KK Indoors",
@@ -8,44 +9,40 @@ export const metadata: Metadata = {
     "Explore our complete range of architectural aluminium and UPVC windows, sliding patio systems, and custom glass doors.",
 };
 
-const WHATSAPP_LINK = "https://wa.me/9318335415";
+const WHATSAPP_LINK = getWhatsAppUrl();
 
 const productCategories = [
   {
     title: "Aluminium Windows",
     description:
       "Ultra-slim sightlines, high structural rigidity, and thermally broken insulation for modern architectural facades.",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&h=500&q=80",
+    image: "/assets/windows.avif",
     features: ["Slim Sightlines", "Thermal Break", "Multi-Point Lock", "RAL Powder Coating"],
-    guideLink: "/blog/upvc-vs-aluminium-windows-comparison",
+    guideLink: "/blog/range-of-upvc-windows-casement-sliding-tilt-turn",
   },
   {
     title: "UPVC Windows",
     description:
       "Multi-chambered profiles delivering industry-leading thermal insulation, weather sealing, and acoustic noise reduction.",
-    image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&h=500&q=80",
+    image: "/assets/windows2.avif",
     features: ["Zero Maintenance", "Acoustic Insulation", "Corrosion Resistant", "UV-Stabilized"],
-    guideLink: "/blog/soundproof-windows-city-living",
+    guideLink: "/blog/system-energy-inward-casement-tilt-and-turn",
   },
   {
     title: "Sliding Patio & Balcony Doors",
     description:
       "Expansive glass panels with smooth whisper-quiet stainless steel rollers connecting living rooms to balconies.",
-    image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&h=500&q=80",
+    image: "/assets/doors2.jpeg",
     features: ["2 & 3-Track Systems", "Integrated Mesh", "Tempered Safety Glass", "Flush Threshold"],
-    guideLink: "/blog/modern-sliding-glass-doors-guide",
+    guideLink: "/blog/sf2-and-lift-and-slide-door-system-specifications",
   },
   {
     title: "Pivot & Entrance Doors",
     description:
       "Architectural front doors that command attention with oversized dimensions, biometric locks, and striking finishes.",
-    image:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&h=500&q=80",
+    image: "/assets/doors.jpeg",
     features: ["Heavy Duty Pivot", "Smart Lock Ready", "Sound Dampening", "Custom Finishes"],
-    guideLink: "/blog/top-front-door-styles-curb-appeal",
+    guideLink: "/blog/range-of-upvc-doors-casement-sliding-lift-slide-fold",
   },
 ];
 

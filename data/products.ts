@@ -13,8 +13,7 @@ export const productsData: ProductItem[] = [
     subCategory: "sliding",
     material: "aluminium",
     windowType: "sliding",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&h=550&q=80",
+    image: "/assets/windows.avif",
     description:
       "Engineered with structural aerospace-grade 6063-T6 aluminium alloy, our slimline sliding windows offer whisper-quiet gliding, maximum daylight transmission, and weather-defending compression seals.",
     keyFeatures: [
@@ -32,7 +31,7 @@ export const productsData: ProductItem[] = [
       warranty: "15-year structural warranty",
     },
     bestFor: "Living rooms, high-rise luxury apartments, and scenic view facades",
-    guideSlug: "upvc-vs-aluminium-windows-comparison",
+    guideSlug: "range-of-upvc-windows-casement-sliding-tilt-turn",
   },
   {
     id: "win-2",
@@ -43,8 +42,7 @@ export const productsData: ProductItem[] = [
     subCategory: "upvc",
     material: "upvc",
     windowType: "casement",
-    image:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&h=550&q=80",
+    image: "/assets/windows2.avif",
     description:
       "Custom multi-chambered UPVC casement windows reinforced with galvanized steel cores. Designed to withstand heavy tropical monsoons, direct solar heat, and coastal saline humidity with zero rotting or rusting.",
     keyFeatures: [
@@ -62,7 +60,7 @@ export const productsData: ProductItem[] = [
       warranty: "20-year profile colorfast warranty",
     },
     bestFor: "Bedrooms, study rooms, coastal homes, and extreme weather climates",
-    guideSlug: "soundproof-windows-city-living",
+    guideSlug: "system-energy-inward-casement-tilt-and-turn",
   },
   {
     id: "win-3",
@@ -73,8 +71,7 @@ export const productsData: ProductItem[] = [
     subCategory: "aluminium",
     material: "aluminium",
     windowType: "tilt-turn",
-    image:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&h=550&q=80",
+    image: "/assets/windows3.avif",
     description:
       "A dual-function engineering marvel: tilt inward at the top for secure draft-free ventilation during rain, or turn the handle to swing wide open for effortless glass cleaning from inside.",
     keyFeatures: [
@@ -92,7 +89,7 @@ export const productsData: ProductItem[] = [
       warranty: "15-year comprehensive warranty",
     },
     bestFor: "High-wind zones, luxury bedrooms, city residences near traffic",
-    guideSlug: "double-glazed-windows-energy-efficiency",
+    guideSlug: "magic-that-our-upvc-windows-and-doors-have",
   },
   {
     id: "win-4",
@@ -103,8 +100,7 @@ export const productsData: ProductItem[] = [
     subCategory: "sliding",
     material: "upvc",
     windowType: "sliding",
-    image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&h=550&q=80",
+    image: "/assets/windows4.avif",
     description:
       "Our UPVC sliding window systems deliver effortless horizontal gliding without occupying internal room space. Built with specialized dust-defending wool-pile weatherstrips to keep city dust out.",
     keyFeatures: [
@@ -122,7 +118,7 @@ export const productsData: ProductItem[] = [
       warranty: "15-year warranty",
     },
     bestFor: "Kitchen counters, balconies, utility rooms, and compact apartments",
-    guideSlug: "maintenance-guide-doors-windows",
+    guideSlug: "upvc-window-door-installation-prerequisites",
   },
   {
     id: "win-5",
@@ -134,7 +130,7 @@ export const productsData: ProductItem[] = [
     material: "upvc",
     windowType: "top-hung",
     image:
-      "https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?auto=format&fit=crop&w=800&h=550&q=80",
+      "https://images.unsplash.com/photo-1495524455245-b0f961d738a9?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Engineered with top hinges and precision multi-point friction stays that allow the bottom sash to push outward safely. Designed for rainproof, draft-free ventilation even during heavy monsoon downpours.",
     keyFeatures: [
@@ -152,7 +148,7 @@ export const productsData: ProductItem[] = [
       warranty: "15-year profile warranty",
     },
     bestFor: "Bathrooms, kitchens, high-rise utility corridors, and stairwells",
-    guideSlug: "soundproof-windows-city-living",
+    guideSlug: "system-energy-inward-casement-tilt-and-turn",
   },
   {
     id: "win-6",
@@ -164,7 +160,7 @@ export const productsData: ProductItem[] = [
     material: "upvc",
     windowType: "french",
     image:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&h=550&q=80",
+      "https://images.unsplash.com/photo-1534175262708-ebf71ac916c2?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Classic French double-sash casement windows featuring flying mullion construction. When both sashes are pushed wide open, enjoy an entirely unobstructed panoramic opening without a central vertical post.",
     keyFeatures: [
@@ -182,7 +178,7 @@ export const productsData: ProductItem[] = [
       warranty: "20-year profile colorfast warranty",
     },
     bestFor: "Balconies, master bedrooms, heritage villas, and garden verandas",
-    guideSlug: "upvc-vs-aluminium-windows-comparison",
+    guideSlug: "range-of-upvc-windows-casement-sliding-tilt-turn",
   },
   {
     id: "win-7",
@@ -194,7 +190,7 @@ export const productsData: ProductItem[] = [
     material: "upvc",
     windowType: "fixed",
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&h=550&q=80",
+      "https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Non-opening architectural fixed picture windows designed to flood indoor spaces with daylight while offering the absolute highest level of acoustic and thermal insulation available in fenestration.",
     keyFeatures: [
@@ -212,7 +208,7 @@ export const productsData: ProductItem[] = [
       warranty: "20-year structural & colorfast warranty",
     },
     bestFor: "Living rooms, high-rise facades, staircases, and roadside bedrooms",
-    guideSlug: "double-glazed-windows-energy-efficiency",
+    guideSlug: "magic-that-our-upvc-windows-and-doors-have",
   },
   {
     id: "win-8",
@@ -223,8 +219,7 @@ export const productsData: ProductItem[] = [
     subCategory: "sliding",
     material: "upvc",
     windowType: "sliding-fixed",
-    image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&h=550&q=80",
+    image: "/assets/windows4.avif",
     description:
       "A versatile combination window unit integrating a large stationary fixed picture window with one or two whisper-quiet horizontal sliding sashes. Combines uncompromised scenic views with controlled fresh airflow.",
     keyFeatures: [
@@ -242,7 +237,7 @@ export const productsData: ProductItem[] = [
       warranty: "15-year warranty",
     },
     bestFor: "Living room verandas, study rooms, dining areas, and balconies",
-    guideSlug: "maintenance-guide-doors-windows",
+    guideSlug: "upvc-window-door-installation-prerequisites",
   },
   {
     id: "win-9",
@@ -254,7 +249,7 @@ export const productsData: ProductItem[] = [
     material: "aluminium",
     windowType: "french",
     image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&h=550&q=80",
+      "https://images.unsplash.com/photo-1537366226591-6cea790209d5?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Bring in fresh air and open up broad views with paired aluminium casement sashes. Strong profiles, weather seals, and adjustable hardware make this system a practical fit for modern homes.",
     keyFeatures: [
@@ -272,7 +267,7 @@ export const productsData: ProductItem[] = [
       warranty: "15-year finish and structural warranty",
     },
     bestFor: "Bedrooms, garden-facing rooms, and wide residential openings",
-    guideSlug: "upvc-vs-aluminium-windows-comparison",
+    guideSlug: "range-of-upvc-windows-casement-sliding-tilt-turn",
   },
   {
     id: "win-10",
@@ -284,7 +279,7 @@ export const productsData: ProductItem[] = [
     material: "aluminium",
     windowType: "top-hung",
     image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&h=550&q=80",
+      "https://images.unsplash.com/photo-1504544855888-394d40ffab6a?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Top-hung aluminium awning windows open outward from the bottom to provide controlled ventilation. Their projecting sash helps shield the opening from light rain while durable hinges keep operation smooth.",
     keyFeatures: [
@@ -302,7 +297,7 @@ export const productsData: ProductItem[] = [
       warranty: "15-year structural warranty",
     },
     bestFor: "Bathrooms, kitchens, stairwells, and utility rooms",
-    guideSlug: "soundproof-windows-city-living",
+    guideSlug: "system-energy-inward-casement-tilt-and-turn",
   },
   {
     id: "win-11",
@@ -314,7 +309,7 @@ export const productsData: ProductItem[] = [
     material: "aluminium",
     windowType: "fixed",
     image:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&h=550&q=80",
+      "https://images.unsplash.com/photo-1554435493-93422e8220c8?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Fixed aluminium picture windows frame views with a clean profile and a tightly sealed perimeter. Pair them with opening windows where ventilation is needed, or use them alone for daylight and expansive sightlines.",
     keyFeatures: [
@@ -332,7 +327,7 @@ export const productsData: ProductItem[] = [
       warranty: "15-year structural warranty",
     },
     bestFor: "Living rooms, staircases, and view-facing elevations",
-    guideSlug: "double-glazed-windows-energy-efficiency",
+    guideSlug: "magic-that-our-upvc-windows-and-doors-have",
   },
   {
     id: "win-12",
@@ -343,8 +338,7 @@ export const productsData: ProductItem[] = [
     subCategory: "upvc",
     material: "upvc",
     windowType: "bay",
-    image:
-      "https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?auto=format&fit=crop&w=800&h=550&q=80",
+    image: "/assets/windows3.avif",
     description:
       "Create a bright bay window using a joined set of UPVC fixed and opening panels. Reinforced frames and sealed corner connections support dependable everyday use while offering flexible ventilation and views.",
     keyFeatures: [
@@ -362,7 +356,7 @@ export const productsData: ProductItem[] = [
       warranty: "20-year profile colorfast warranty",
     },
     bestFor: "Living rooms, dining areas, and corner-facing bedrooms",
-    guideSlug: "maintenance-guide-doors-windows",
+    guideSlug: "upvc-window-door-installation-prerequisites",
   },
 
   // =========================================================================
@@ -377,8 +371,7 @@ export const productsData: ProductItem[] = [
     subCategory: "sliding",
     material: "aluminium",
     doorType: "sliding",
-    image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&h=550&q=80",
+    image: "/assets/doors2.jpeg",
     description:
       "Create monumental architectural openings with our heavy-duty sliding patio doors. Capable of handling glass panels up to 3 meters tall with seamless feather-light fingertip gliding on stainless steel tracks.",
     keyFeatures: [
@@ -396,7 +389,7 @@ export const productsData: ProductItem[] = [
       warranty: "15-year mechanical warranty",
     },
     bestFor: "Patio walkouts, villa balconies, terrace gardens, poolside lounges",
-    guideSlug: "modern-sliding-glass-doors-guide",
+    guideSlug: "sf2-and-lift-and-slide-door-system-specifications",
   },
   {
     id: "door-2",
@@ -407,8 +400,7 @@ export const productsData: ProductItem[] = [
     subCategory: "pivot",
     material: "aluminium",
     doorType: "pivot",
-    image:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&h=550&q=80",
+    image: "/assets/doors.jpeg",
     description:
       "Make an extraordinary architectural statement at your main entrance. Instead of traditional side hinges, these doors rotate smoothly on concealed floor-pivot boxes, supporting widths up to 1.8 meters.",
     keyFeatures: [
@@ -426,7 +418,7 @@ export const productsData: ProductItem[] = [
       warranty: "10-year comprehensive warranty",
     },
     bestFor: "Main front villa entrances, contemporary bungalows, commercial foyers",
-    guideSlug: "top-front-door-styles-curb-appeal",
+    guideSlug: "range-of-upvc-doors-casement-sliding-lift-slide-fold",
   },
   {
     id: "door-3",
@@ -437,8 +429,7 @@ export const productsData: ProductItem[] = [
     subCategory: "upvc",
     material: "upvc",
     doorType: "sliding",
-    image:
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&h=550&q=80",
+    image: "/assets/The-Growing-Demand-for-uPVC-Sliding-Doors-in-Modern-Architecture.png",
     description:
       "Designed specifically for high-rise apartment balconies and bedroom verandas where wind-driven monsoon rain and city noise are constant challenges. Multi-chamber UPVC profiles block drafts completely.",
     keyFeatures: [
@@ -456,7 +447,7 @@ export const productsData: ProductItem[] = [
       warranty: "20-year profile colorfast warranty",
     },
     bestFor: "Master bedroom balconies, high-rise apartments, coastal verandas",
-    guideSlug: "maintenance-guide-doors-windows",
+    guideSlug: "upvc-window-door-installation-prerequisites",
   },
   {
     id: "door-4",
@@ -468,7 +459,7 @@ export const productsData: ProductItem[] = [
     material: "glass",
     doorType: "glass",
     image:
-      "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&h=550&q=80",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Achieve optical clarity and spacious fluidity with our frameless 12mm toughened safety glass doors. Equipped with brushed steel patch fittings, hydraulic floor springs, and frosted privacy bands if desired.",
     keyFeatures: [
@@ -486,7 +477,7 @@ export const productsData: ProductItem[] = [
       warranty: "10-year hardware warranty",
     },
     bestFor: "Office conference rooms, master bathroom suites, study room dividers",
-    guideSlug: "modern-sliding-glass-doors-guide",
+    guideSlug: "sf2-and-lift-and-slide-door-system-specifications",
   },
   {
     id: "door-5",
@@ -497,8 +488,7 @@ export const productsData: ProductItem[] = [
     subCategory: "aluminium",
     material: "aluminium",
     doorType: "slide-and-fold",
-    image:
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&h=550&q=80",
+    image: "/assets/doors2.jpeg",
     description:
       "Concertina folding doors that concertina neatly to the edge, opening up almost the entire width of your room. Enjoy unobstructed garden views and an expansive entertainment lounge when entertaining guests.",
     keyFeatures: [
@@ -516,7 +506,7 @@ export const productsData: ProductItem[] = [
       warranty: "15-year comprehensive warranty",
     },
     bestFor: "Garden decks, terrace bar areas, pool houses, restaurant facades",
-    guideSlug: "upvc-vs-aluminium-windows-comparison",
+    guideSlug: "range-of-upvc-windows-casement-sliding-tilt-turn",
   },
   {
     id: "door-6",
@@ -528,7 +518,7 @@ export const productsData: ProductItem[] = [
     material: "upvc",
     doorType: "casement",
     image:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&h=550&q=80",
+      "https://images.unsplash.com/photo-1518533856279-30b62c40cc30?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Heavy-duty UPVC hinged casement doors built with thick multi-chambered profiles and internal galvanized steel stiffeners. Engineered with continuous dual EPDM rubber gaskets for complete weatherproofing, noise reduction, and thermal insulation.",
     keyFeatures: [
@@ -546,7 +536,7 @@ export const productsData: ProductItem[] = [
       warranty: "20-year profile colorfast warranty",
     },
     bestFor: "Balconies, terraces, patio walkouts, villa backyards, and entrance foyers",
-    guideSlug: "upvc-vs-aluminium-windows-comparison",
+    guideSlug: "range-of-upvc-windows-casement-sliding-tilt-turn",
   },
   {
     id: "door-7",
@@ -557,8 +547,7 @@ export const productsData: ProductItem[] = [
     subCategory: "upvc",
     material: "upvc",
     doorType: "slide-and-fold",
-    image:
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&h=550&q=80",
+    image: "/assets/doors.jpeg",
     description:
       "Monumental UPVC slide and fold panoramic doors. The individual door sashes concertina effortlessly along high-grade stainless steel tracks and fold flat against the wall, merging indoor spaces with balconies and gardens.",
     keyFeatures: [
@@ -576,7 +565,7 @@ export const productsData: ProductItem[] = [
       warranty: "15-year comprehensive warranty",
     },
     bestFor: "Living room verandas, garden decks, pool areas, and luxury penthouses",
-    guideSlug: "modern-sliding-glass-doors-guide",
+    guideSlug: "sf2-and-lift-and-slide-door-system-specifications",
   },
   {
     id: "door-8",
@@ -587,8 +576,7 @@ export const productsData: ProductItem[] = [
     subCategory: "aluminium",
     material: "aluminium",
     doorType: "lift-and-slide",
-    image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&h=550&q=80",
+    image: "/assets/doors2.jpeg",
     description:
       "Lift-and-slide patio doors raise the panel slightly off its seals for smooth movement, then lower it into a secure weather-tight position when closed. The system suits wide openings and heavy glass panels.",
     keyFeatures: [
@@ -606,7 +594,7 @@ export const productsData: ProductItem[] = [
       warranty: "15-year mechanical warranty",
     },
     bestFor: "Large patios, terraces, and high-end balcony openings",
-    guideSlug: "modern-sliding-glass-doors-guide",
+    guideSlug: "sf2-and-lift-and-slide-door-system-specifications",
   },
   {
     id: "door-9",
@@ -618,7 +606,7 @@ export const productsData: ProductItem[] = [
     material: "aluminium",
     doorType: "french",
     image:
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&h=550&q=80",
+      "https://images.unsplash.com/photo-1518533856279-30b62c40cc30?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Paired aluminium French doors open from the centre to connect indoor rooms with patios and gardens. Slim profiles, secure locking, and a choice of glazing options bring a familiar format up to date.",
     keyFeatures: [
@@ -636,7 +624,7 @@ export const productsData: ProductItem[] = [
       warranty: "15-year structural warranty",
     },
     bestFor: "Garden exits, balconies, and terrace entrances",
-    guideSlug: "top-front-door-styles-curb-appeal",
+    guideSlug: "range-of-upvc-doors-casement-sliding-lift-slide-fold",
   },
   {
     id: "door-10",
@@ -648,7 +636,7 @@ export const productsData: ProductItem[] = [
     material: "aluminium",
     doorType: "hinged",
     image:
-      "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&h=550&q=80",
+      "https://images.unsplash.com/photo-1481277542470-605612bd2d61?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Built for everyday entry, aluminium hinged doors combine a reinforced leaf with weather seals and a choice of panel or glazed designs. Configure the finish and hardware to complement the building exterior.",
     keyFeatures: [
@@ -666,7 +654,7 @@ export const productsData: ProductItem[] = [
       warranty: "10-year comprehensive warranty",
     },
     bestFor: "Main entrances, side access, and contemporary renovations",
-    guideSlug: "top-front-door-styles-curb-appeal",
+    guideSlug: "range-of-upvc-doors-casement-sliding-lift-slide-fold",
   },
   {
     id: "door-11",
@@ -678,7 +666,7 @@ export const productsData: ProductItem[] = [
     material: "glass",
     doorType: "glass",
     image:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&h=550&q=80",
+      "https://images.unsplash.com/photo-1516684402831-c151c11c6023?auto=format&fit=crop&w=800&h=550&q=80",
     description:
       "Made-to-measure frameless shower doors use toughened safety glass and corrosion-resistant fittings for a clean bathroom enclosure. Choose a hinged or sliding layout to fit the available space.",
     keyFeatures: [
@@ -696,7 +684,7 @@ export const productsData: ProductItem[] = [
       warranty: "10-year hardware warranty",
     },
     bestFor: "Walk-in showers, compact bathrooms, and ensuite suites",
-    guideSlug: "modern-sliding-glass-doors-guide",
+    guideSlug: "sf2-and-lift-and-slide-door-system-specifications",
   },
 ];
 

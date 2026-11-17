@@ -14,6 +14,11 @@ export function getCloudinaryUrl(
 ): string {
   if (!src) return "";
 
+  // Local assets from public directory (e.g. /assets/windows.avif)
+  if (src.startsWith("/")) {
+    return src;
+  }
+
   // Keep external image URLs unchanged.
   if (/^https?:\/\//i.test(src)) {
     // Return Unsplash and other external URLs as they are.

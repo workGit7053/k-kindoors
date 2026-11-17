@@ -2,13 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { ProductItem } from "@/types/product";
 import { getCloudinaryUrl } from "@/lib/cloudinary";
+import { getWhatsAppUrl } from "@/lib/contact";
 
 interface ProductCardProps {
   product: ProductItem;
   priority?: boolean;
 }
-
-const WHATSAPP_PHONE = "9318335415";
 
 export default function ProductCard({
   product,
@@ -21,9 +20,9 @@ export default function ProductCard({
     quality: "auto",
   });
 
-  const whatsappInquiryUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(
+  const whatsappInquiryUrl = getWhatsAppUrl(
     `Hello KK Indoors, I am interested in getting a quote and specifications for "${product.title}" (${product.tagline}). Please provide estimated pricing.`
-  )}`;
+  );
 
   return (
     <div className="group flex flex-col overflow-hidden rounded-3xl border border-[#E5E7EB] bg-white shadow-sm transition-shadow duration-300 hover:border-[#0F8F7E]/40 hover:shadow-xl hover:shadow-[#0F8F7E]/10">

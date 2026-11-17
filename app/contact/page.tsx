@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import {
+  CALL_PHONE_DISPLAY,
+  getCallUrl,
+  getWhatsAppUrl,
+} from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "Contact Us & Location | KK Indoors Windows & Doors",
@@ -13,15 +18,15 @@ export const metadata: Metadata = {
 const CONTACT_CONFIG = {
   // WhatsApp detail (use international format without spaces or '+' for wa.me URL)
   whatsapp: {
-    display: "+91 8851629191",
-    link: "https://wa.me/8851629191?text=Hello%20KK%20Indoors%2C%20I%20would%20like%20to%20inquire%20about%20windows%20and%20doors.",
+    display: "+91 88516 29191",
+    link: getWhatsAppUrl("Hello KK Indoors, I would like to inquire about windows and doors."),
     status: "Online • Typically replies in 15 mins",
   },
 
   // Mobile phone number for direct calling
   phone: {
-    display: "+91 8527721904",
-    link: "tel:+91 8527721904",
+    display: CALL_PHONE_DISPLAY,
+    link: getCallUrl(),
     hours: "Mon – Sat: 9:00 AM – 7:30 PM",
   },
 

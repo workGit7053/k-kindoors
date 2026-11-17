@@ -1,13 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { getWhatsAppUrl } from "@/lib/contact";
 
 // =========================================================================
 // CUSTOMIZE HERE: WhatsApp number used for direct quote forwarding
 // Replace with your actual 10 or 12 digit country-coded number without +
 // =========================================================================
-const WHATSAPP_PHONE = "9318335415";
-
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -18,7 +17,6 @@ export default function ContactForm() {
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -29,24 +27,18 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-
-    // Simulate instant form processing
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-    }, 600);
+    openWhatsAppWithDetails();
+    setSubmitted(true);
   };
 
   const openWhatsAppWithDetails = () => {
-    const text = encodeURIComponent(
+    const text =
       `Hello KK Indoors,\n\nName: ${formData.name || "N/A"}\nPhone: ${
         formData.phone || "N/A"
       }\nEmail: ${formData.email || "N/A"}\nProduct Interest: ${
         formData.product
       }\nMessage: ${formData.message || "I would like a quote."}`
-    );
-    window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${text}`, "_blank");
+    window.open(getWhatsAppUrl(text), "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -64,20 +56,20 @@ export default function ContactForm() {
       </div>
 
       <p className="relative mt-2 text-sm text-[#6B7280]">
-        Fill out your project specifications below. Our architectural engineers will review your requirements and provide estimated pricing within 24 hours.
+        Share your project details and we’ll prepare a WhatsApp message for you to send to our team.
       </p>
 
       {submitted ? (
-        /* Success State Notification */
+        /* WhatsApp handoff confirmation */
         <div className="mt-8 rounded-2xl border border-[#A7E0D6] bg-gradient-to-br from-[#E3F4F1] to-[#F5F7F8] p-8 text-center">
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#0F8F7E] text-2xl text-white shadow-md shadow-[#0F8F7E]/30">
             ✓
           </div>
           <h3 className="mt-4 text-xl font-bold text-[#1E2328]">
-            Inquiry Submitted Successfully!
+            Your WhatsApp message is ready
           </h3>
           <p className="mx-auto mt-2 max-w-md text-sm text-[#6B7280]">
-            Thank you, <strong className="text-[#1E2328]">{formData.name}</strong>. We have received your request and will contact you at <strong className="text-[#1E2328]">{formData.phone || formData.email}</strong> shortly.
+            WhatsApp should open with your inquiry details. Review the message and send it to reach our team. If it didn’t open, use the button below.
           </p>
 
           <div className="mt-6 flex flex-wrap justify-center gap-3">
@@ -86,7 +78,7 @@ export default function ContactForm() {
               onClick={openWhatsAppWithDetails}
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#0F8F7E] to-[#0D7A6B] px-6 py-2.5 text-xs font-semibold text-white shadow-md shadow-[#0F8F7E]/20 transition-all hover:from-[#14A693] hover:to-[#0F8F7E]"
             >
-              <span>Forward to WhatsApp for Faster Reply</span>
+              <span>Open WhatsApp message</span>
               <span>→</span>
             </button>
             <button
@@ -221,38 +213,10 @@ export default function ContactForm() {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <button
               type="submit"
-              disabled={loading}
               className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#0F8F7E] to-[#0D7A6B] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#0F8F7E]/25 transition-all hover:from-[#14A693] hover:to-[#0F8F7E] disabled:opacity-60"
             >
-              {loading ? (
-                <>
-                  <svg
-                    className="h-4 w-4 animate-spin text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle
-                      className="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                    />
-                    <path
-                      className="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                    />
-                  </svg>
-                  <span>Submitting...</span>
-                </>
-              ) : (
-                <>
-                  <span>Submit Inquiry Request</span>
-                  <span>→</span>
-                </>
-              )}
+              <span>Continue to WhatsApp</span>
+              <span>→</span>
             </button>
 
             <button

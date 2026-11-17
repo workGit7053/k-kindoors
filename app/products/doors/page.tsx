@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getDoorsProducts } from "@/data/products";
 import DoorsCatalog from "@/components/DoorsCatalog";
+import { getWhatsAppUrl } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "Architectural Doors | UPVC & Aluminium Systems | KK Indoors",
@@ -9,8 +10,9 @@ export const metadata: Metadata = {
     "Discover UPVC casement doors, smooth sliding patio doors, panoramic slide and fold systems, and monumental architectural entrances.",
 };
 
-const WHATSAPP_LINK =
-  "https://wa.me/9318335415?text=Hello%20KK%20Indoors,%20I%20am%20interested%20in%20doors%20for%20my%20project.%20Please%20share%20quotation%20and%20catalogs.";
+const WHATSAPP_LINK = getWhatsAppUrl(
+  "Hello KK Indoors, I am interested in doors for my project. Please share quotation and catalogs."
+);
 
 export default function DoorsPage() {
   const doors = getDoorsProducts("all");

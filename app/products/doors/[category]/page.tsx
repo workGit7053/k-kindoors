@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getDoorsProducts } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
+import { getWhatsAppUrl } from "@/lib/contact";
 
 interface Props {
   params: Promise<{ category: string }>;
@@ -15,35 +16,31 @@ const VALID_CATEGORIES = ["aluminium", "upvc", "sliding", "glass"];
 
 const categoryMeta: Record<
   string,
-  { title: string; heading: string; description: string; guideSlug: string }
+  { title: string; heading: string; description: string }
 > = {
   aluminium: {
     title: "Aluminium Doors | High-Load Sliders & Bi-Fold Systems",
     heading: "Architectural Aluminium Doors",
     description:
       "Structural aluminium profile door systems designed for expansive openings, slim modern border frames, and whisper-quiet operation.",
-    guideSlug: "modern-sliding-glass-doors-guide",
   },
   upvc: {
     title: "UPVC Doors | Balcony Sliders & Casement French Doors",
     heading: "Weather-Sealed UPVC Doors",
     description:
       "Engineered with internal galvanized steel cores, multi-chambered insulation, and dual EPDM gaskets for total monsoon and noise defense.",
-    guideSlug: "maintenance-guide-doors-windows",
   },
   sliding: {
     title: "Sliding Doors | Heavy-Duty Patio & Balcony Systems",
     heading: "Smooth-Glide Sliding Patio Doors",
     description:
       "Grand panoramic sliding systems engineered with 2-track and 3-track options, flush thresholds, and stainless steel Grade 304 tandem rollers.",
-    guideSlug: "modern-sliding-glass-doors-guide",
   },
   glass: {
     title: "Glass Doors | Frameless Toughened Safety Partitions",
     heading: "Frameless Toughened Glass Doors",
     description:
       "12mm Grade-A toughened glass doors and room dividers equipped with minimalist architectural patch fittings and hydraulic floor pivots.",
-    guideSlug: "top-front-door-styles-curb-appeal",
   },
 };
 
@@ -122,9 +119,9 @@ async function DoorCategoryContent({ params }: Props) {
     },
   ];
 
-  const whatsappInquiryUrl = `https://wa.me/9318335415?text=${encodeURIComponent(
+  const whatsappInquiryUrl = getWhatsAppUrl(
     `Hello KK Indoors, I would like to inquire about ${meta.heading} for my architectural project.`
-  )}`;
+  );
 
   return (
     <div className="min-h-screen bg-[#F5F7F8] py-14 lg:py-20">

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getWindowsProducts } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
+import { getWhatsAppUrl } from "@/lib/contact";
 
 interface Props {
   params: Promise<{ category: string }>;
@@ -15,28 +16,25 @@ const VALID_CATEGORIES = ["aluminium", "upvc", "sliding"];
 
 const categoryMeta: Record<
   string,
-  { title: string; heading: string; description: string; guideSlug: string }
+  { title: string; heading: string; description: string }
 > = {
   aluminium: {
     title: "Aluminium Windows | Slimline & Thermal Break Systems",
     heading: "Architectural Aluminium Windows",
     description:
       "Crafted with structural aerospace-grade 6063-T6 alloy for ultra-slim frames, grand panoramic views, and unmatched modern architectural elegance.",
-    guideSlug: "upvc-vs-aluminium-windows-comparison",
   },
   upvc: {
     title: "UPVC Windows | Multi-Chamber Energy & Acoustic Systems",
     heading: "High-Performance UPVC Windows",
     description:
       "Engineered with 5-chamber internal insulation profiles and galvanized steel reinforcements to block monsoon rain, tropical heat, and city noise completely.",
-    guideSlug: "soundproof-windows-city-living",
   },
   sliding: {
     title: "Sliding Windows | Whisper-Quiet Horizon Gliders",
     heading: "Smooth-Glide Sliding Windows",
     description:
       "Space-saving horizontal sliding systems featuring low-friction Grade 304 stainless steel tandem rollers and optional integrated mosquito mesh channels.",
-    guideSlug: "maintenance-guide-doors-windows",
   },
 };
 
@@ -109,9 +107,9 @@ async function WindowCategoryContent({ params }: Props) {
     },
   ];
 
-  const whatsappInquiryUrl = `https://wa.me/9318335415?text=${encodeURIComponent(
+  const whatsappInquiryUrl = getWhatsAppUrl(
     `Hello KK Indoors, I would like to inquire about ${meta.heading} for my architectural project.`
-  )}`;
+  );
 
   return (
     <div className="min-h-screen bg-[#F5F7F8] py-14 lg:py-20">

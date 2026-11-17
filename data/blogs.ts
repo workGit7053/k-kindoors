@@ -18,8 +18,7 @@ export const windowMagicBlogPosts: BlogPost[] = [
     excerpt:
       "Since its humble beginning in 2002, Window Magic has built an enviable reputation as a premier high-quality uPVC doors and windows brand. Meet the company, its plant, and its promise.",
     category: "About Us",
-    coverImage:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/assets/Untitled-design-30-min.jpg",
     author: AUTHOR,
     publishedAt: "2026-10-28",
     readingTime: "5 min read",
@@ -119,8 +118,7 @@ export const windowMagicBlogPosts: BlogPost[] = [
     excerpt:
       "From maximum wind resistance and water tightness to lead-free, fire-retardant and UV-stable profiles, here is a quick tour of what makes Window Magic windows and doors special.",
     category: "Features & Benefits",
-    coverImage:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/assets/The-Growing-Demand-for-uPVC-Sliding-Doors-in-Modern-Architecture.png",
     author: AUTHOR,
     publishedAt: "2026-10-27",
     readingTime: "3 min read",
@@ -180,8 +178,7 @@ export const windowMagicBlogPosts: BlogPost[] = [
     excerpt:
       "Casement/French, Top Hung, Sliding, Tilt & Turn, Fanlight and Arch windows: explore each uPVC window type from Window Magic and what it is best suited for.",
     category: "Windows",
-    coverImage:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/assets/windows.avif",
     author: AUTHOR,
     publishedAt: "2026-10-26",
     readingTime: "4 min read",
@@ -243,8 +240,7 @@ export const windowMagicBlogPosts: BlogPost[] = [
     excerpt:
       "Discover Window Magic's uPVC door range, from classic French doors to heavy-duty Lift & Slide doors that glide on feather-touch operation, plus Slide & Fold doors that open 90% or more.",
     category: "Doors",
-    coverImage:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/assets/doors2.jpeg",
     author: AUTHOR,
     publishedAt: "2026-10-25",
     readingTime: "4 min read",
@@ -302,7 +298,7 @@ export const windowMagicBlogPosts: BlogPost[] = [
       "Window Magic uPVC windows and doors suit every property type and every taste. Browse the ex-stock and on-order colour and woodgrain options available through profile lamination.",
     category: "Design & Trends",
     coverImage:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1588436706487-9d55d73a39e3?auto=format&fit=crop&w=1200&q=80",
     author: AUTHOR,
     publishedAt: "2026-10-24",
     readingTime: "4 min read",
@@ -371,7 +367,7 @@ export const windowMagicBlogPosts: BlogPost[] = [
       "Insect screen fabrication is part of Window Magic's offering. Learn how Pull Down, Pleated, Zig Zag and Sliding mesh systems differ, and which suits your doors and windows.",
     category: "Insect Screens",
     coverImage:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?auto=format&fit=crop&w=1200&q=80",
     author: AUTHOR,
     publishedAt: "2026-10-23",
     readingTime: "3 min read",
@@ -428,7 +424,7 @@ export const windowMagicBlogPosts: BlogPost[] = [
       "A conservatory is the ultimate extension between your living space and the natural environment around you. Learn what defines one and how Window Magic designs them around your needs.",
     category: "Conservatories",
     coverImage:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1639714436234-6c6ce7a5de79?auto=format&fit=crop&w=1200&q=80",
     author: AUTHOR,
     publishedAt: "2026-10-22",
     readingTime: "4 min read",
@@ -479,8 +475,7 @@ export const windowMagicBlogPosts: BlogPost[] = [
     excerpt:
       "A technical look at Window Magic's System Casement: key features, glass thickness, wall thickness, corner strength, and the main profile codes for frames, sashes, transoms and beads.",
     category: "Technical Systems",
-    coverImage:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/assets/windows2.avif",
     author: AUTHOR,
     publishedAt: "2026-10-21",
     readingTime: "4 min read",
@@ -556,7 +551,7 @@ export const windowMagicBlogPosts: BlogPost[] = [
       "System Energy is an inward-opening system built for energy saving, sound insulation and enhanced security. See its features, profile codes and the Tilt & Turn cross-section.",
     category: "Technical Systems",
     coverImage:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1586871608133-07983be82894?auto=format&fit=crop&w=1200&q=80",
     author: AUTHOR,
     publishedAt: "2026-10-20",
     readingTime: "3 min read",
@@ -623,8 +618,7 @@ export const windowMagicBlogPosts: BlogPost[] = [
     excerpt:
       "Compare System Sliding and System Sliding Advance: glass thickness ranges, drainage design, locking compatibility and the complete profile lists for sliding windows and doors.",
     category: "Technical Systems",
-    coverImage:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/assets/windows4.avif",
     author: AUTHOR,
     publishedAt: "2026-10-19",
     readingTime: "5 min read",
@@ -711,8 +705,7 @@ export const windowMagicBlogPosts: BlogPost[] = [
     excerpt:
       "For very large openings and heavy glazing, the SF2 sliding door system and Lift & Slide door deliver excellent performance. Check maximum sash sizes, glass thickness and threshold details.",
     category: "Technical Systems",
-    coverImage:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/assets/The-Growing-Demand-for-uPVC-Sliding-Doors-in-Modern-Architecture.png",
     author: AUTHOR,
     publishedAt: "2026-10-18",
     readingTime: "3 min read",
@@ -771,8 +764,7 @@ export const windowMagicBlogPosts: BlogPost[] = [
     excerpt:
       "Slide & Fold doors fold in a space-saving manner and slide to the side, giving unobstructed access to your garden, terrace or balcony. See their application range and limits.",
     category: "Doors",
-    coverImage:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/assets/doors.jpeg",
     author: AUTHOR,
     publishedAt: "2026-10-17",
     readingTime: "3 min read",
@@ -814,8 +806,7 @@ export const windowMagicBlogPosts: BlogPost[] = [
     excerpt:
       "Before your uPVC windows and doors are installed, the opening must be prepared correctly. Follow this checklist covering plastering, shimming, measurement tolerances, sills, painting and grills.",
     category: "Installation Guide",
-    coverImage:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "/assets/windows3.avif",
     author: AUTHOR,
     publishedAt: "2026-10-16",
     readingTime: "3 min read",
